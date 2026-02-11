@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=360">
+  <title>FAIL Kampaň 4 — READY OR NOT (Warm Editorial)</title>
+  <style>
+    /* ============================================
+       KAMPAŇ 4: "READY OR NOT"
+       Kompletně nový design — ŽÁDNÉ vazby na web FAIL
+       
+       TREND 2026:
+       • Warm editorial — krémové/butter pozadí
+       • Neo-brutalism — silné okraje, offset stíny
+       • Velká serifová typografie jako hlavní designový prvek
+       • Terracotta / burnt orange / sage akcenty
+       • Anti-corporate, lidský, premium feel
+       • Hodně whitespace, text-as-hero
+       ============================================ */
+
+    @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #F5F0EB;
+      color: #1A1A1A;
+    }
+
+    .section-label {
+      display: inline-block;
+      background: #1A1A1A;
+      color: #F5F0EB;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      margin-bottom: 20px;
+    }
+
+    h1 { font-family: 'Instrument Serif', serif; }
+    .serif { font-family: 'Instrument Serif', serif; }
+    .sans { font-family: 'DM Sans', sans-serif; }
+
+    /* Color system */
+    .bg-cream { background: #F5F0EB; }
+    .bg-butter { background: #F2E8D5; }
+    .bg-terracotta { background: #C4603A; }
+    .bg-sage { background: #8B9E7E; }
+    .bg-charcoal { background: #2D2D2D; }
+    .bg-warm-white { background: #FDFBF7; }
+
+    .text-terra { color: #C4603A; }
+    .text-sage { color: #6B8F5E; }
+    .text-charcoal { color: #2D2D2D; }
+    .text-cream { color: #F5F0EB; }
+
+    /* Neo-brutalist card */
+    .neo-card {
+      background: #FDFBF7;
+      border: 2.5px solid #1A1A1A;
+      box-shadow: 4px 4px 0 #1A1A1A;
+    }
+
+    .neo-card-terra {
+      background: #C4603A;
+      border: 2.5px solid #1A1A1A;
+      box-shadow: 4px 4px 0 #1A1A1A;
+      color: #FDFBF7;
+    }
+
+    .neo-card-sage {
+      background: #D4DEC9;
+      border: 2.5px solid #1A1A1A;
+      box-shadow: 4px 4px 0 #1A1A1A;
+    }
+
+    /* Pill tag */
+    .pill {
+      display: inline-block;
+      border: 1.5px solid #1A1A1A;
+      border-radius: 999px;
+      padding: 4px 12px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    /* Divider */
+    .thick-line {
+      width: 100%;
+      height: 3px;
+      background: #1A1A1A;
+    }
+
+    /* Highlight box */
+    .highlight-box {
+      background: #FFF3CD;
+      border-left: 4px solid #C4603A;
+      padding: 12px 14px;
+    }
+
+    /* Banner container */
+    .banner {
+      width: 360px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .banner-1x1 { height: 360px; }
+    .banner-9x16 { height: 640px; }
+    .carousel-slide { height: 360px; }
+
+    /* Section spacing */
+    .section-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #C4603A;
+      margin: 60px 0 8px 0;
+      padding-top: 20px;
+      border-top: 3px solid #C4603A;
+    }
+
+    .section-desc {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    .banner-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: #999;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin: 24px 0 10px 0;
+    }
+  </style>
+</head>
+<body style="padding: 20px;">
+
+  <!-- ============================================ -->
+  <!-- HEADER -->
+  <!-- ============================================ -->
+  <div style="margin-bottom: 40px;">
+    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
+      <div style="width: 10px; height: 10px; background: #C4603A; border-radius: 50%;"></div>
+      <span style="font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;">KAMPAŇ 4</span>
+    </div>
+    <h1 style="font-size: 36px; line-height: 1.1; color: #1A1A1A; margin-bottom: 10px;">
+      Ready or Not
+    </h1>
+    <p style="font-size: 15px; color: #666; line-height: 1.6; max-width: 340px;">
+      Warm editorial design. Serifová typografie. Krémové tóny. Neo-brutalism. <strong>Kompletně jiný vizuální jazyk</strong> — žádný dark mode, žádný neon, žádný tech look.
+    </p>
+    <div style="margin-top: 14px; display: flex; gap: 6px; flex-wrap: wrap;">
+      <span class="pill">Butter tones</span>
+      <span class="pill">Terracotta</span>
+      <span class="pill">Sage green</span>
+      <span class="pill">Instrument Serif</span>
+      <span class="pill">Neo-brutalism</span>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- VARIANTA 1: "THE MANIFESTO" -->
+  <!-- Velký textový statement, editorial typografie -->
+  <!-- ============================================ -->
+  <div class="section-title">Varianta 1</div>
+  <h2 class="serif" style="font-size: 24px; margin-bottom: 4px;">The Manifesto</h2>
+  <p class="section-desc">Velký textový statement. Text JE design. Serifová typografie, teplé pozadí, minimum dekorace. Zastaví scroll svou odlišností.</p>
+
+  <!-- 1:1 -->
+  <p class="banner-label">1:1 — Feed</p>
+  <div class="banner banner-1x1 bg-butter" style="padding: 30px; display: flex; flex-direction: column; justify-content: space-between;">
+    <!-- Top -->
+    <div>
+      <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+        <span style="font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #999;">Otázka roku 2026</span>
+        <div style="width: 40px; height: 3px; background: #C4603A;"></div>
+      </div>
+    </div>
+
+    <!-- Main text -->
+    <div>
+      <h1 style="font-size: 38px; line-height: 1.05; color: #1A1A1A; margin-bottom: 16px;">
+        Budeš <em style="color: #C4603A;">řídit</em> AI,<br>
+        nebo tě AI<br>
+        <em style="color: #C4603A;">nahradí?</em>
+      </h1>
+      <div style="width: 50px; height: 3px; background: #1A1A1A; margin-bottom: 14px;"></div>
+      <p style="font-size: 13px; color: #555; line-height: 1.5;">
+        10 týdnů. Praktické nasazení AI.<br>
+        Žádná teorie navíc.
+      </p>
+    </div>
+
+    <!-- Bottom -->
+    <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+      <div>
+        <p style="font-size: 18px; font-weight: 700; color: #1A1A1A; letter-spacing: -0.5px;">Future AI Leader</p>
+        <p style="font-size: 11px; color: #999;">Start 13. března 2026</p>
+      </div>
+      <div class="neo-card-terra" style="padding: 8px 14px; font-size: 11px; font-weight: 700; letter-spacing: 1px;">
+        ZJISTIT VÍC →
+      </div>
+    </div>
+  </div>
+
+  <!-- 9:16 -->
+  <p class="banner-label">9:16 — Story / Reel</p>
+  <div class="banner banner-9x16 bg-cream" style="padding: 36px 28px; display: flex; flex-direction: column; justify-content: space-between;">
+    <!-- Top stripe -->
+    <div>
+      <div style="background: #C4603A; padding: 6px 12px; display: inline-block; margin-bottom: 20px;">
+        <span style="font-size: 10px; font-weight: 700; letter-spacing: 3px; color: #FDFBF7; text-transform: uppercase;">Future AI Leader</span>
+      </div>
+      <p style="font-size: 11px; color: #999; letter-spacing: 2px; text-transform: uppercase;">Start 13. března 2026</p>
+    </div>
+
+    <!-- Central manifesto -->
+    <div>
+      <h1 style="font-size: 44px; line-height: 1.0; color: #1A1A1A; margin-bottom: 20px;">
+        Za 10 týdnů<br>
+        budeš vědět<br>
+        přesně,<br>
+        <em style="color: #C4603A;">co dělat<br>
+        s AI.</em>
+      </h1>
+      <div style="width: 60px; height: 3px; background: #1A1A1A; margin-bottom: 16px;"></div>
+      <p style="font-size: 14px; color: #555; line-height: 1.6;">
+        Strategie. AI agenti. Reálné projekty.<br>
+        Praxe, která změní tvůj přístup k vedení.
+      </p>
+    </div>
+
+    <!-- Bottom -->
+    <div>
+      <div class="neo-card" style="padding: 14px 18px; text-align: center;">
+        <p style="font-size: 12px; font-weight: 700; letter-spacing: 1px;">250+ absolventů · 95% doporučuje</p>
+      </div>
+      <p style="font-size: 10px; color: #999; text-align: center; margin-top: 10px;">↑ Swipe up — zjisti víc</p>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- VARIANTA 2: "THE CURRICULUM" -->
+  <!-- Warm editorial cards — co se naučíš -->
+  <!-- ============================================ -->
+  <div class="section-title">Varianta 2</div>
+  <h2 class="serif" style="font-size: 24px; margin-bottom: 4px;">The Curriculum</h2>
+  <p class="section-desc">Warm editorial s neo-brutalist kartami. Ukazuje konkrétně CO se naučíš. Card-based layout, sage/terracotta akcenty.</p>
+
+  <!-- 1:1 -->
+  <p class="banner-label">1:1 — Feed</p>
+  <div class="banner banner-1x1 bg-warm-white" style="padding: 24px; display: flex; flex-direction: column; justify-content: space-between;">
+    <!-- Top -->
+    <div>
+      <div style="display: flex; gap: 6px; margin-bottom: 14px;">
+        <span class="pill" style="background: #C4603A; color: #fff; border-color: #C4603A; font-size: 10px;">NOVÝ ROČNÍK</span>
+        <span class="pill" style="font-size: 10px;">10 týdnů</span>
+      </div>
+      <h1 style="font-size: 22px; line-height: 1.15; color: #1A1A1A;">
+        Co se <em style="color: #C4603A;">reálně</em> naučíš<br>za 10 týdnů?
+      </h1>
+    </div>
+
+    <!-- Cards -->
+    <div style="display: flex; flex-direction: column; gap: 8px;">
+      <div class="neo-card" style="padding: 10px 14px; display: flex; align-items: flex-start; gap: 10px;">
+        <span style="font-size: 22px; font-weight: 800; color: #C4603A; line-height: 1; font-family: 'Instrument Serif', serif;">01</span>
+        <div>
+          <p style="font-size: 12px; font-weight: 700;">AI strategie & leadership</p>
+          <p style="font-size: 11px; color: #777;">Jak přemýšlet o AI jako lídr, ne jako uživatel</p>
+        </div>
+      </div>
+      <div class="neo-card-sage" style="padding: 10px 14px; display: flex; align-items: flex-start; gap: 10px;">
+        <span style="font-size: 22px; font-weight: 800; color: #2D2D2D; line-height: 1; font-family: 'Instrument Serif', serif;">02</span>
+        <div>
+          <p style="font-size: 12px; font-weight: 700;">AI agenti v praxi</p>
+          <p style="font-size: 11px; color: #444;">Nasazení agentů do reálných firemních procesů</p>
+        </div>
+      </div>
+      <div class="neo-card" style="padding: 10px 14px; display: flex; align-items: flex-start; gap: 10px;">
+        <span style="font-size: 22px; font-weight: 800; color: #C4603A; line-height: 1; font-family: 'Instrument Serif', serif;">03</span>
+        <div>
+          <p style="font-size: 12px; font-weight: 700;">Mindset & komunita</p>
+          <p style="font-size: 11px; color: #777;">Síť 250+ lídrů, kteří řeší totéž</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom CTA -->
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <p style="font-size: 16px; font-weight: 700;">Future AI Leader</p>
+      <div class="neo-card-terra" style="padding: 8px 14px; font-size: 11px; font-weight: 700; letter-spacing: 0.5px;">
+        PŘIHLÁSIT SE →
+      </div>
+    </div>
+  </div>
+
+  <!-- 9:16 -->
+  <p class="banner-label">9:16 — Story / Reel</p>
+  <div class="banner banner-9x16 bg-butter" style="padding: 30px 24px; display: flex; flex-direction: column; justify-content: space-between;">
+    <!-- Top -->
+    <div>
+      <div style="background: #1A1A1A; padding: 6px 12px; display: inline-block; margin-bottom: 10px;">
+        <span style="font-size: 10px; font-weight: 700; letter-spacing: 3px; color: #F5F0EB; text-transform: uppercase;">Future AI Leader</span>
+      </div>
+      <h1 style="font-size: 28px; line-height: 1.1; color: #1A1A1A; margin-top: 10px;">
+        Tohle se naučíš<br>
+        za <em style="color: #C4603A;">10 týdnů.</em>
+      </h1>
+    </div>
+
+    <!-- Curriculum items -->
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+      <div class="neo-card" style="padding: 14px;">
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 6px;">
+          <span style="font-size: 28px; font-weight: 800; color: #C4603A; font-family: 'Instrument Serif', serif;">01</span>
+          <div style="flex: 1; height: 2px; background: #ddd;"></div>
+        </div>
+        <p style="font-size: 14px; font-weight: 700;">AI strategie pro lídry</p>
+        <p style="font-size: 11px; color: #777; margin-top: 2px;">Jak najít příležitosti, stanovit priority, měřit dopad</p>
+      </div>
+      <div class="neo-card-sage" style="padding: 14px;">
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 6px;">
+          <span style="font-size: 28px; font-weight: 800; color: #2D2D2D; font-family: 'Instrument Serif', serif;">02</span>
+          <div style="flex: 1; height: 2px; background: rgba(0,0,0,0.15);"></div>
+        </div>
+        <p style="font-size: 14px; font-weight: 700;">AI agenti & automatizace</p>
+        <p style="font-size: 11px; color: #444; margin-top: 2px;">Nasadit AI agenty do reálných procesů ve firmě</p>
+      </div>
+      <div class="neo-card-terra" style="padding: 14px;">
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 6px;">
+          <span style="font-size: 28px; font-weight: 800; color: #FDFBF7; font-family: 'Instrument Serif', serif;">03</span>
+          <div style="flex: 1; height: 2px; background: rgba(255,255,255,0.3);"></div>
+        </div>
+        <p style="font-size: 14px; font-weight: 700;">Prompting & produktivita</p>
+        <p style="font-size: 11px; color: rgba(255,255,255,0.8); margin-top: 2px;">Efektivní práce s AI v každodenní praxi</p>
+      </div>
+      <div class="neo-card" style="padding: 14px;">
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 6px;">
+          <span style="font-size: 28px; font-weight: 800; color: #C4603A; font-family: 'Instrument Serif', serif;">04</span>
+          <div style="flex: 1; height: 2px; background: #ddd;"></div>
+        </div>
+        <p style="font-size: 14px; font-weight: 700;">Mindset & leadership</p>
+        <p style="font-size: 11px; color: #777; margin-top: 2px;">Komunita 250+ lídrů. Networking. Podpora.</p>
+      </div>
+    </div>
+
+    <!-- Bottom -->
+    <div style="text-align: center;">
+      <div class="neo-card-terra" style="padding: 12px 24px; display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 0.5px;">
+        PŘIHLÁSIT SE — START 13. 3. 2026 →
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- VARIANTA 3: "THE PROOF" -->
+  <!-- Čísla a social proof, neo-brutalist -->
+  <!-- ============================================ -->
+  <div class="section-title">Varianta 3</div>
+  <h2 class="serif" style="font-size: 24px; margin-bottom: 4px;">The Proof</h2>
+  <p class="section-desc">Social proof + čísla v neo-brutalist stylu. Velká čísla, tlusté okraje, offset stíny. Buduje důvěru a urgency zároveň.</p>
+
+  <!-- 1:1 -->
+  <p class="banner-label">1:1 — Feed</p>
+  <div class="banner banner-1x1 bg-warm-white" style="padding: 24px; display: flex; flex-direction: column; justify-content: space-between;">
+    <!-- Top -->
+    <div>
+      <div style="display: flex; align-items: center; justify-content: space-between;">
+        <span class="pill" style="font-size: 10px;">FUTURE AI LEADER</span>
+        <span style="font-size: 10px; color: #999;">2026</span>
+      </div>
+    </div>
+
+    <!-- Big numbers -->
+    <div>
+      <div style="display: flex; gap: 10px; margin-bottom: 14px;">
+        <div class="neo-card" style="flex: 1; padding: 14px; text-align: center;">
+          <p class="serif" style="font-size: 42px; color: #C4603A; line-height: 1;">250+</p>
+          <p style="font-size: 10px; color: #999; font-weight: 500; margin-top: 2px;">absolventů</p>
+        </div>
+        <div class="neo-card-terra" style="flex: 1; padding: 14px; text-align: center;">
+          <p class="serif" style="font-size: 42px; color: #FDFBF7; line-height: 1;">95%</p>
+          <p style="font-size: 10px; color: rgba(255,255,255,0.7); font-weight: 500; margin-top: 2px;">doporučuje</p>
+        </div>
+      </div>
+      <div class="neo-card-sage" style="padding: 10px 14px; text-align: center;">
+        <p class="serif" style="font-size: 28px; color: #2D2D2D; line-height: 1;">10</p>
+        <p style="font-size: 10px; color: #444; font-weight: 500; margin-top: 2px;">týdnů intenzivního programu</p>
+      </div>
+    </div>
+
+    <!-- Quote + CTA -->
+    <div>
+      <div class="highlight-box" style="margin-bottom: 12px;">
+        <p style="font-size: 12px; color: #555; line-height: 1.5; font-style: italic;">
+          „Konečně vím, jak AI reálně nasadit — ne jen o ní mluvit."
+        </p>
+        <p style="font-size: 10px; color: #999; margin-top: 4px;">— Absolvent programu</p>
+      </div>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p style="font-size: 11px; color: #999;">Start 13. 3. 2026</p>
+        <div class="neo-card-terra" style="padding: 8px 14px; font-size: 11px; font-weight: 700;">
+          CHCI VĚDĚT VÍC →
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 9:16 -->
+  <p class="banner-label">9:16 — Story / Reel</p>
+  <div class="banner banner-9x16" style="background: #2D2D2D; padding: 30px 24px; display: flex; flex-direction: column; justify-content: space-between;">
+    <!-- Top -->
+    <div>
+      <div style="background: #C4603A; padding: 6px 12px; display: inline-block; margin-bottom: 14px;">
+        <span style="font-size: 10px; font-weight: 700; letter-spacing: 3px; color: #FDFBF7; text-transform: uppercase;">Čísla mluví</span>
+      </div>
+      <h1 style="font-size: 26px; line-height: 1.15; color: #F5F0EB;">
+        Proč <em style="color: #C4603A;">250+ lídrů</em><br>
+        prošlo tímto programem?
+      </h1>
+    </div>
+
+    <!-- Stats stack -->
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+      <div style="background: #F5F0EB; border: 2.5px solid #F5F0EB; padding: 16px; display: flex; align-items: center; gap: 14px;">
+        <span class="serif" style="font-size: 36px; color: #C4603A; line-height: 1;">95%</span>
+        <p style="font-size: 12px; color: #555;">absolventů program<br>doporučuje dál</p>
+      </div>
+      <div style="background: #C4603A; border: 2.5px solid #C4603A; padding: 16px; display: flex; align-items: center; gap: 14px;">
+        <span class="serif" style="font-size: 36px; color: #FDFBF7; line-height: 1;">10</span>
+        <p style="font-size: 12px; color: rgba(255,255,255,0.85);">týdnů intenzivní<br>praxe s AI</p>
+      </div>
+      <div style="background: #D4DEC9; border: 2.5px solid #D4DEC9; padding: 16px; display: flex; align-items: center; gap: 14px;">
+        <span class="serif" style="font-size: 36px; color: #2D2D2D; line-height: 1;">6+</span>
+        <p style="font-size: 12px; color: #444;">modulů: strategie,<br>agenti, prompting, leadership</p>
+      </div>
+    </div>
+
+    <!-- Testimonial -->
+    <div>
+      <div style="border-left: 3px solid #C4603A; padding-left: 14px; margin-bottom: 20px;">
+        <p style="font-size: 13px; color: #F5F0EB; font-style: italic; line-height: 1.5;">
+          „Změnil mi pohled na to, co znamená vést tým v éře AI."
+        </p>
+        <p style="font-size: 10px; color: #999; margin-top: 4px;">— Absolvent programu</p>
+      </div>
+      <div style="background: #F5F0EB; padding: 12px; text-align: center; border: 2px solid #F5F0EB;">
+        <p style="font-size: 13px; font-weight: 700; color: #1A1A1A;">Další ročník: <span style="color: #C4603A;">13. března 2026</span></p>
+        <p style="font-size: 10px; color: #777; margin-top: 2px;">↑ Swipe — zjisti víc</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- CAROUSEL — 5 slidů -->
+  <!-- ============================================ -->
+  <div class="section-title">Carousel</div>
+  <h2 class="serif" style="font-size: 24px; margin-bottom: 4px;">5-Slide Carousel</h2>
+  <p class="section-desc">Edukativní carousel — provede diváka od problému přes řešení k CTA. Warm editorial styl, neo-brutalist karty.</p>
+
+  <!-- Slide 1 — Hook -->
+  <p class="banner-label">Slide 1 — Hook</p>
+  <div class="banner carousel-slide bg-butter" style="padding: 30px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+    <div style="background: #C4603A; width: 50px; height: 3px; margin-bottom: 20px;"></div>
+    <h1 style="font-size: 32px; line-height: 1.1; color: #1A1A1A; margin-bottom: 14px;">
+      90 % firem<br>
+      <em style="color: #C4603A;">plánuje</em> AI.<br><br>
+      Méně než 10 %<br>
+      ji <em style="color: #C4603A;">reálně</em> nasadí.
+    </h1>
+    <div style="width: 50px; height: 3px; background: #1A1A1A; margin-bottom: 12px;"></div>
+    <p style="font-size: 12px; color: #999;">Přejeď doprava →</p>
+  </div>
+
+  <!-- Slide 2 — Problem -->
+  <p class="banner-label">Slide 2 — Problém</p>
+  <div class="banner carousel-slide bg-warm-white" style="padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
+    <div>
+      <span class="pill" style="font-size: 10px; margin-bottom: 14px;">PROBLÉM</span>
+      <h1 style="font-size: 24px; line-height: 1.15; color: #1A1A1A; margin-top: 12px;">
+        Proč většina<br>AI iniciativ<br><em style="color: #C4603A;">ztroskotá?</em>
+      </h1>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 8px;">
+      <div class="neo-card" style="padding: 10px 12px;">
+        <p style="font-size: 12px;">❌ Chybí AI strategie — experimentuje se naslepo</p>
+      </div>
+      <div class="neo-card" style="padding: 10px 12px;">
+        <p style="font-size: 12px;">❌ Lídři nerozumí AI — delegují na IT</p>
+      </div>
+      <div class="neo-card" style="padding: 10px 12px;">
+        <p style="font-size: 12px;">❌ Žádný systém — jen izolované nástroje</p>
+      </div>
+    </div>
+    <p style="font-size: 11px; color: #999; text-align: right;">→</p>
+  </div>
+
+  <!-- Slide 3 — Solution -->
+  <p class="banner-label">Slide 3 — Řešení</p>
+  <div class="banner carousel-slide bg-cream" style="padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
+    <div>
+      <span class="pill" style="font-size: 10px; background: #D4DEC9; border-color: #1A1A1A; margin-bottom: 14px;">ŘEŠENÍ</span>
+      <h1 style="font-size: 24px; line-height: 1.15; color: #1A1A1A; margin-top: 12px;">
+        Future AI Leader<br>
+        ti dá <em style="color: #6B8F5E;">systém.</em>
+      </h1>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 8px;">
+      <div class="neo-card-sage" style="padding: 10px 12px;">
+        <p style="font-size: 12px;">✓ AI strategie — víš, kde AI přinese největší hodnotu</p>
+      </div>
+      <div class="neo-card-sage" style="padding: 10px 12px;">
+        <p style="font-size: 12px;">✓ AI agenti — nasadíš je do reálných procesů</p>
+      </div>
+      <div class="neo-card-sage" style="padding: 10px 12px;">
+        <p style="font-size: 12px;">✓ Leadership — vedeš tým, který s AI pracuje</p>
+      </div>
+    </div>
+    <p style="font-size: 11px; color: #999; text-align: right;">→</p>
+  </div>
+
+  <!-- Slide 4 — Format -->
+  <p class="banner-label">Slide 4 — Formát</p>
+  <div class="banner carousel-slide bg-butter" style="padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
+    <div>
+      <span class="pill" style="font-size: 10px; margin-bottom: 14px;">JAK TO PROBÍHÁ</span>
+      <h1 style="font-size: 22px; line-height: 1.15; color: #1A1A1A; margin-top: 12px;">
+        10 týdnů,<br>
+        které změní tvůj<br>
+        <em style="color: #C4603A;">přístup k AI.</em>
+      </h1>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 6px;">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div class="neo-card-terra" style="padding: 8px 10px; min-width: 44px; text-align: center;">
+          <span style="font-size: 14px; font-weight: 800;">📚</span>
+        </div>
+        <p style="font-size: 12px;">Online moduly — vlastním tempem</p>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div class="neo-card" style="padding: 8px 10px; min-width: 44px; text-align: center;">
+          <span style="font-size: 14px; font-weight: 800;">🎯</span>
+        </div>
+        <p style="font-size: 12px;">Živé workshopy — praxe na reálných případech</p>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div class="neo-card-sage" style="padding: 8px 10px; min-width: 44px; text-align: center;">
+          <span style="font-size: 14px; font-weight: 800;">🤝</span>
+        </div>
+        <p style="font-size: 12px;">Komunita 250+ lídrů — networking & podpora</p>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div class="neo-card" style="padding: 8px 10px; min-width: 44px; text-align: center;">
+          <span style="font-size: 14px; font-weight: 800;">🏆</span>
+        </div>
+        <p style="font-size: 12px;">Certifikát — prokáž svou AI kompetenci</p>
+      </div>
+    </div>
+    <p style="font-size: 11px; color: #999; text-align: right;">→</p>
+  </div>
+
+  <!-- Slide 5 — CTA -->
+  <p class="banner-label">Slide 5 — CTA</p>
+  <div class="banner carousel-slide" style="background: #C4603A; padding: 30px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+    <div style="background: #FDFBF7; width: 50px; height: 3px; margin-bottom: 24px;"></div>
+    <h1 style="font-size: 30px; line-height: 1.1; color: #FDFBF7; margin-bottom: 16px;">
+      Další ročník<br>
+      startuje<br>
+      <span style="background: #FDFBF7; color: #C4603A; padding: 2px 8px;">13. března<br>2026.</span>
+    </h1>
+    <p style="font-size: 13px; color: rgba(255,255,255,0.8); margin-bottom: 24px;">
+      Kapacita je omezená.
+    </p>
+    <div style="background: #FDFBF7; border: 2.5px solid #1A1A1A; box-shadow: 4px 4px 0 rgba(0,0,0,0.3); padding: 14px 28px;">
+      <p style="font-size: 14px; font-weight: 700; color: #1A1A1A; letter-spacing: 0.5px;">PŘIHLÁSIT SE →</p>
+    </div>
+    <p style="font-size: 10px; color: rgba(255,255,255,0.6); margin-top: 16px;">aipredictions.cz/future-ai-leader</p>
+  </div>
+
+
+  <!-- ============================================ -->
+  <!-- AD COPY -->
+  <!-- ============================================ -->
+  <div style="margin-top: 80px; padding-top: 30px; border-top: 4px solid #1A1A1A;">
+    <div class="section-label">AD COPY</div>
+    <h2 class="serif" style="font-size: 28px; margin-bottom: 30px;">Texty reklam</h2>
+
+    <!-- Copy Varianta A — Manifesto hook -->
+    <div class="neo-card" style="padding: 20px; margin-bottom: 20px;">
+      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+        <div style="width: 8px; height: 8px; background: #C4603A; border-radius: 50%;"></div>
+        <span style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;">Varianta A — Manifesto</span>
+      </div>
+      <p style="font-size: 13px; font-weight: 700; color: #C4603A; margin-bottom: 6px;">Hook:</p>
+      <p style="font-size: 13px; line-height: 1.6; margin-bottom: 12px;">
+        Budeš řídit AI, nebo tě AI nahradí?
+      </p>
+      <p style="font-size: 13px; font-weight: 700; color: #6B8F5E; margin-bottom: 6px;">Body:</p>
+      <p style="font-size: 13px; line-height: 1.6; margin-bottom: 12px;">
+        Tuhle otázku si za 2 roky položí každý manažer.<br><br>
+        Ale ti, kdo na ni odpoví teď, budou mít náskok, který ostatní nedoženou.<br><br>
+        Future AI Leader je 10týdenní program, kde se naučíš:<br>
+        → Vytvořit AI strategii pro svou firmu<br>
+        → Nasadit AI agenty do reálných procesů<br>
+        → Vést tým, který s AI pracuje každý den<br><br>
+        Žádná teorie. Praxe od prvního týdne. Komunita 250+ lídrů, kteří řeší totéž co ty.
+      </p>
+      <p style="font-size: 13px; font-weight: 700; color: #C4603A; margin-bottom: 6px;">CTA:</p>
+      <p style="font-size: 13px;">
+        Další ročník startuje 13. března. Kapacita je omezená.<br>
+        👉 Zjisti víc na aipredictions.cz/future-ai-leader
+      </p>
+    </div>
+
+    <!-- Copy Varianta B — Curriculum hook -->
+    <div class="neo-card-sage" style="padding: 20px; margin-bottom: 20px;">
+      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+        <div style="width: 8px; height: 8px; background: #2D2D2D; border-radius: 50%;"></div>
+        <span style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;">Varianta B — Curriculum</span>
+      </div>
+      <p style="font-size: 13px; font-weight: 700; color: #2D2D2D; margin-bottom: 6px;">Hook:</p>
+      <p style="font-size: 13px; line-height: 1.6; margin-bottom: 12px;">
+        Za 10 týdnů budeš vědět přesně, co dělat s AI.
+      </p>
+      <p style="font-size: 13px; font-weight: 700; color: #2D2D2D; margin-bottom: 6px;">Body:</p>
+      <p style="font-size: 13px; line-height: 1.6; margin-bottom: 12px;">
+        Ne další webinář. Ne další „úvod do AI".<br><br>
+        Future AI Leader je program, kde za 10 týdnů získáš:<br><br>
+        📚 AI strategii — víš, kde AI přinese tvé firmě největší hodnotu<br>
+        🤖 AI agenty v praxi — nasadíš je do reálných firemních procesů<br>
+        🧠 Nový mindset — přemýšlíš jako lídr, ne jako uživatel<br>
+        🤝 Komunitu 250+ lidí, kteří to řeší stejně jako ty<br><br>
+        Online moduly. Živé workshopy. Reálné projekty. Certifikát.
+      </p>
+      <p style="font-size: 13px; font-weight: 700; color: #2D2D2D; margin-bottom: 6px;">CTA:</p>
+      <p style="font-size: 13px;">
+        Start: 13. března 2026. Přihlaš se, dokud jsou místa.<br>
+        👉 aipredictions.cz/future-ai-leader
+      </p>
+    </div>
+
+    <!-- Copy Varianta C — Proof hook -->
+    <div class="neo-card" style="padding: 20px; margin-bottom: 20px;">
+      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+        <div style="width: 8px; height: 8px; background: #C4603A; border-radius: 50%;"></div>
+        <span style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;">Varianta C — Social Proof</span>
+      </div>
+      <p style="font-size: 13px; font-weight: 700; color: #C4603A; margin-bottom: 6px;">Hook:</p>
+      <p style="font-size: 13px; line-height: 1.6; margin-bottom: 12px;">
+        250+ lídrů to už udělalo. 95 % z nich program doporučuje.
+      </p>
+      <p style="font-size: 13px; font-weight: 700; color: #6B8F5E; margin-bottom: 6px;">Body:</p>
+      <p style="font-size: 13px; line-height: 1.6; margin-bottom: 12px;">
+        Co mají společného?<br><br>
+        Pochopili, že AI není hrozba — je to příležitost. A rozhodli se ji uchopit.<br><br>
+        Program Future AI Leader tě za 10 týdnů naučí:<br>
+        → Jak s AI pracovat strategicky (ne jen promptovat)<br>
+        → Jak nasadit AI agenty do firemních procesů<br>
+        → Jak vést tým, který AI využívá naplno<br><br>
+        95 % absolventů program doporučuje. Protože funguje.
+      </p>
+      <p style="font-size: 13px; font-weight: 700; color: #C4603A; margin-bottom: 6px;">CTA:</p>
+      <p style="font-size: 13px;">
+        Další ročník: 13. března 2026. Místa se plní.<br>
+        👉 Více na aipredictions.cz/future-ai-leader
+      </p>
+    </div>
+
+    <!-- Carousel copy -->
+    <div style="background: #F2E8D5; border: 2.5px solid #1A1A1A; padding: 20px; margin-bottom: 20px;">
+      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+        <div style="width: 8px; height: 8px; background: #1A1A1A; border-radius: 50%;"></div>
+        <span style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;">Carousel copy</span>
+      </div>
+      <p style="font-size: 13px; line-height: 1.6;">
+        90 % firem plánuje AI. Méně než 10 % ji reálně nasadí.<br><br>
+        Rozdíl? Lídři, kteří vědí, jak na to.<br><br>
+        👉 Přejeď 5 slidů a zjisti, jak se stát jedním z nich.<br><br>
+        #FutureAILeader #AI #Leadership
+      </p>
+    </div>
+  </div>
+
+
+  <!-- ============================================ -->
+  <!-- VIDEO STORYBOARDS -->
+  <!-- ============================================ -->
+  <div style="margin-top: 60px; padding-top: 30px; border-top: 4px solid #1A1A1A;">
+    <div class="section-label">VIDEO CONCEPTS</div>
+    <h2 class="serif" style="font-size: 28px; margin-bottom: 30px;">Video storyboardy s Filipem Dřímalkou</h2>
+
+    <!-- Video 1 — "The Question" -->
+    <div style="margin-bottom: 30px;">
+      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
+        <div style="background: #C4603A; color: #fff; font-size: 11px; font-weight: 800; padding: 4px 10px; border-radius: 3px;">VIDEO 1</div>
+        <span style="font-size: 14px; font-weight: 700;">The Question (15–20 s)</span>
+      </div>
+      <p style="font-size: 12px; color: #666; margin-bottom: 14px;">Filip se dívá přímo do kamery. Teplé osvětlení. Krémové pozadí. Žádné efekty — jen autenticita.</p>
+
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px;">
+        <div style="background: #F2E8D5; border: 2px solid #1A1A1A; padding: 10px; text-align: center;">
+          <div style="font-size: 22px; margin-bottom: 4px;">🎬</div>
+          <p style="font-size: 9px; color: #C4603A; font-weight: 700; letter-spacing: 1px; margin-bottom: 3px;">0–3 s</p>
+          <p style="font-size: 10px; color: #555;">Filip do kamery:<br>„Řídíš AI…"</p>
+        </div>
+        <div style="background: #FDFBF7; border: 2px solid #1A1A1A; padding: 10px; text-align: center;">
+          <div style="font-size: 22px; margin-bottom: 4px;">⏸️</div>
+          <p style="font-size: 9px; color: #C4603A; font-weight: 700; letter-spacing: 1px; margin-bottom: 3px;">3–5 s</p>
+          <p style="font-size: 10px; color: #555;">Dramatická pauza.<br>Pohled do kamery.</p>
+        </div>
+        <div style="background: #F2E8D5; border: 2px solid #1A1A1A; padding: 10px; text-align: center;">
+          <div style="font-size: 22px; margin-bottom: 4px;">🗣️</div>
+          <p style="font-size: 9px; color: #C4603A; font-weight: 700; letter-spacing: 1px; margin-bottom: 3px;">5–12 s</p>
+          <p style="font-size: 10px; color: #555;">„…nebo AI<br>řídí tebe?"<br>+ co je FAIL</p>
+        </div>
+        <div style="background: #C4603A; border: 2px solid #1A1A1A; padding: 10px; text-align: center;">
+          <div style="font-size: 22px; margin-bottom: 4px;">👆</div>
+          <p style="font-size: 9px; color: #FDFBF7; font-weight: 700; letter-spacing: 1px; margin-bottom: 3px;">12–15 s</p>
+          <p style="font-size: 10px; color: #FDFBF7;">CTA: „Odkaz<br>v bio."<br>13. března</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video 2 — "3 věci" -->
+    <div style="margin-bottom: 30px;">
+      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
+        <div style="background: #6B8F5E; color: #fff; font-size: 11px; font-weight: 800; padding: 4px 10px; border-radius: 3px;">VIDEO 2</div>
+        <span style="font-size: 14px; font-weight: 700;">3 věci, které se naučíš (30 s)</span>
+      </div>
+      <p style="font-size: 12px; color: #666; margin-bottom: 14px;">Edukativní formát. Filip vysvětluje 3 klíčové pilíře programu. Rychlé střihy, warm tóny, textové overlay.</p>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px;">
+        <div style="background: #F2E8D5; border: 2px solid #1A1A1A; padding: 12px; text-align: center;">
+          <div style="font-size: 22px; margin-bottom: 4px;">☝️</div>
+          <p style="font-size: 9px; color: #6B8F5E; font-weight: 700; letter-spacing: 1px; margin-bottom: 3px;">0–10 s</p>
+          <p style="font-size: 10px; color: #555;"><strong>„Za prvé"</strong><br>AI strategie —<br>kde AI přinese<br>největší hodnotu</p>
+        </div>
+        <div style="background: #D4DEC9; border: 2px solid #1A1A1A; padding: 12px; text-align: center;">
+          <div style="font-size: 22px; margin-bottom: 4px;">✌️</div>
+          <p style="font-size: 9px; color: #6B8F5E; font-weight: 700; letter-spacing: 1px; margin-bottom: 3px;">10–20 s</p>
+          <p style="font-size: 10px; color: #444;"><strong>„Za druhé"</strong><br>AI agenti —<br>jak je nasadit<br>do praxe</p>
+        </div>
+        <div style="background: #C4603A; border: 2px solid #1A1A1A; padding: 12px; text-align: center;">
+          <div style="font-size: 22px; margin-bottom: 4px;">🤟</div>
+          <p style="font-size: 9px; color: #FDFBF7; font-weight: 700; letter-spacing: 1px; margin-bottom: 3px;">20–30 s</p>
+          <p style="font-size: 10px; color: #FDFBF7;"><strong>„Za třetí"</strong><br>Mindset lídra —<br>jak vést tým<br>v éře AI + CTA</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video 3 — "Before / After" -->
+    <div style="margin-bottom: 30px;">
+      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
+        <div style="background: #1A1A1A; color: #F5F0EB; font-size: 11px; font-weight: 800; padding: 4px 10px; border-radius: 3px;">VIDEO 3</div>
+        <span style="font-size: 14px; font-weight: 700;">Před a po (20–25 s)</span>
+      </div>
+      <p style="font-size: 12px; color: #666; margin-bottom: 14px;">Kontrast před/po programu. Filip popisuje typický příběh absolventa. Warm, relatable, storytelling.</p>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px;">
+        <div style="background: #eee; border: 2px solid #1A1A1A; padding: 14px; text-align: center;">
+          <p style="font-size: 10px; font-weight: 700; color: #999; letter-spacing: 1px; margin-bottom: 6px;">PŘED</p>
+          <p style="font-size: 11px; color: #555; line-height: 1.5;">
+            „Nevěděl/a,<br>kde začít.<br>AI = chaos.<br>Tým čekal."
+          </p>
+          <p style="font-size: 9px; color: #C4603A; font-weight: 700; margin-top: 6px;">0–8 s</p>
+        </div>
+        <div style="background: #D4DEC9; border: 2px solid #1A1A1A; padding: 14px; text-align: center;">
+          <p style="font-size: 10px; font-weight: 700; color: #2D2D2D; letter-spacing: 1px; margin-bottom: 6px;">PO</p>
+          <p style="font-size: 11px; color: #444; line-height: 1.5;">
+            „Má strategii.<br>Nasadil/a agenty.<br>Tým funguje.<br>Výsledky rostou."
+          </p>
+          <p style="font-size: 9px; color: #6B8F5E; font-weight: 700; margin-top: 6px;">8–18 s</p>
+        </div>
+      </div>
+      <div style="background: #C4603A; border: 2px solid #1A1A1A; padding: 12px; text-align: center; margin-top: 6px;">
+        <p style="font-size: 11px; color: #FDFBF7; font-weight: 700;">18–25 s: Filip — „Chceš být taky po? Odkaz v bio." + CTA</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ============================================ -->
+  <!-- DESIGN NOTES -->
+  <!-- ============================================ -->
+  <div style="margin-top: 60px; padding: 24px; background: #2D2D2D; color: #F5F0EB;">
+    <p style="font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #C4603A; margin-bottom: 14px;">Design Notes</p>
+    <div style="font-size: 12px; line-height: 1.8; color: #ccc;">
+      <p><strong style="color: #F5F0EB;">Proč tento styl?</strong></p>
+      <p>• <strong>Anti-dark-mode:</strong> Zatímco 95 % AI reklam jde do tmavých tonů s neonem, teplá krémová paleta okamžitě vyčnívá ve feedu.</p>
+      <p>• <strong>Serifová typografie (Instrument Serif):</strong> Asociuje serióznost, editorial kvalitu — jako byste četli Forbes nebo HBR, ne tech startup.</p>
+      <p>• <strong>Neo-brutalism:</strong> Tlusté okraje a offset stíny jsou trend 2025–2026 (Figma, Notion, Gumroad). Vytvářejí haptický, „hmatatelný" pocit.</p>
+      <p>• <strong>Warm palette (Butter + Terracotta + Sage):</strong> Pantone 2025 Mocha Mousse nastartoval vlnu teplých tónů. V 2026 dominují butter/cream, terracotta a sage.</p>
+      <p>• <strong>Text-as-hero:</strong> Žádné stock fotky, žádné AI generované obrázky. Samotný text je designovým prvkem — to je to, co na sítích zastavuje scroll.</p>
+      <p style="margin-top: 10px;"><strong style="color: #F5F0EB;">Cílová skupina:</strong> Profesionálové 30–50, manažeři, kteří vnímají editorial styl jako důvěryhodný a premium.</p>
+    </div>
+  </div>
+
+  <div style="height: 40px;"></div>
+
+</body>
+</html>
