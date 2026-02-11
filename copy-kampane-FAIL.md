@@ -22,7 +22,7 @@
 >
 > Na které straně jsi ty?  
 >
-> Program Future AI Leader tě za 10 týdnů přesune na stranu, kde se věci dějou. Systematicky. S AI agenty. S komunitou 250+ lídrů z T-Mobile, Volkswagen nebo Mondelēz.  
+> Program Future AI Leader tě za 10 týdnů přesune na stranu, kde se věci dějou. Systematicky. S AI agenty. S komunitou 250+ lídrů z předních firem.  
 >
 > 👉 Zjisti víc o programu →
 
@@ -76,7 +76,7 @@
 >
 > Dva přístupy. Dva výsledky. Jeden program, který ti ukáže ten správný.  
 >
-> 250+ absolventů. T-Mobile, Volkswagen, Mondelēz. 95% spokojenost.  
+> 250+ absolventů. 95% spokojenost.  
 >
 > Future AI Leader 2026 — přihlas se →
 
@@ -126,7 +126,7 @@
 > Na jedné straně lídři, kteří AI zkouší — copy-paste prompty, random experimenty, žádný systém.  
 > Na druhé lídři, kteří s AI staví — workflow, agenti, strategický mindset.  
 >
-> 250+ lídrů z T-Mobile, Volkswagen, Mondelēz už přešli na druhou stranu.  
+> 250+ lídrů z předních firem už přešlo na druhou stranu.  
 >
 > Swipni a podívej se, na které straně jsi ty 👇  
 >
@@ -223,7 +223,7 @@
 > [OK] darja_s.log — „80 slidů + 40 stran dokumentace za 3 hodiny." // time_saved: 90%  
 >
 > → 250+ verified users in system  
-> → T-Mobile, Volkswagen, Mondelēz, FNZ Group...  
+> → 250+ lídrů z předních firem  
 >
 > Chceš taky výstup `[OK]`?  
 >
@@ -234,7 +234,7 @@
 >
 > To nejsou sliby. To jsou reálné výsledky absolventů programu Future AI Leader.  
 >
-> 250+ lídrů z T-Mobile, Volkswagen a dalších firem prošlo 10týdenním programem, který mění způsob, jakým pracujete s AI.  
+> 250+ lídrů z předních firem prošlo 10týdenním programem, který mění způsob, jakým pracujete s AI.  
 >
 > Žádné teorie. Hands-on praxe. AI agenti. Komunita.  
 >
@@ -287,7 +287,7 @@
 >
 > Program pro lídry, kteří chtějí AI opravdu používat. Ne o tom jen číst.  
 >
-> 95% absolventů doporučuje. T-Mobile, Volkswagen, Mondelēz.  
+> 95% absolventů doporučuje.  
 >
 > 🎯 Zjisti víc o programu →
 
@@ -303,7 +303,7 @@
 **Primární text (varianta 1):**
 > Oni to udělali dřív.  
 >
-> 250+ lídrů z T-Mobile, Volkswagen, Mondelēz a FNZ Group prošlo programem Future AI Leader. A teď s AI staví budoucnost svých firem.  
+> 250+ lídrů z předních firem prošlo programem Future AI Leader. A teď s AI staví budoucnost svých firem.  
 >
 > 250+ absolventů. 10 týdnů. 95% doporučení.  
 >
@@ -312,9 +312,9 @@
 > 👉 Zjisti víc →
 
 **Primární text (varianta 2):**
-> T-Mobile. Volkswagen. Mondelēz. FNZ Group.  
+> Víš, co mají společného lídři z předních firem?  
 >
-> Víš, co mají společného? Jejich lídři prošli programem Future AI Leader. A teď mají AI v procesech, ve strategii, v každodenní práci.  
+> Prošli programem Future AI Leader. A teď mají AI v procesech, ve strategii, v každodenní práci.  
 >
 > Není to o tom „jestli" AI změnit tvou firmu. Je to o tom „kdy." A oni to udělali dřív.  
 >
@@ -334,7 +334,7 @@
 >
 > Další ročník Future AI Leader startuje 13. března 2026. Kapacita je omezená — a plní se rychle.  
 >
-> 250+ lídrů z T-Mobile, Volkswagen a dalších firem programem už prošlo. A další se hlásí.  
+> 250+ lídrů z předních firem programem už prošlo. A další se hlásí.  
 >
 > 10 týdnů. AI mindset. Automatizace. AI agenti. Komunita. Reálné výsledky.  
 >
@@ -380,7 +380,7 @@
 >
 > Všechny spojuje jedno: Program Future AI Leader.  
 >
-> 10 týdnů. AI mindset. Praxe. Komunita 250+ lídrů z T-Mobile, Volkswagen, Mondelēz.  
+> 10 týdnů. AI mindset. Praxe. Komunita 250+ lídrů z předních firem.  
 >
 > Teď jsi na řadě ty.  
 > 🎯 Start: 13. března 2026 → link v bio
@@ -420,7 +420,7 @@ Split screen — na jedné polovině Filip ukazuje „starý svět" (ručně scr
 >  
 > Filip Dřímalka — autor bestselleru „Budoucnost nepráce" a Osobnost AI 2025 — ti ukáže, proč ten rozdíl roste každým dnem.  
 >  
-> 10týdenní program Future AI Leader. 250+ lídrů z T-Mobile, Volkswagen, Mondelēz.  
+> 10týdenní program Future AI Leader. 250+ lídrů z předních firem.  
 >  
 > 👉 Zjisti víc →
 
@@ -576,7 +576,7 @@ Filip čte/sdílí reálné příběhy absolventů. Střídání: Filip mluví �
 >  
 > Filip Dřímalka sdílí příběhy absolventů programu Future AI Leader. Žádné sliby — reálné výsledky.  
 >  
-> 250+ lídrů z T-Mobile, Volkswagen, Mondelēz. 95% doporučení.  
+> 250+ lídrů z předních firem. 95% doporučení.  
 >  
 > 🎯 Oni to udělali dřív. Kdy ty? →
 
@@ -619,7 +619,7 @@ Krátké, naléhavé video. Filip mluví rychle, přímo, s energií. Na pozadí
 - Rychlé řezy / jump cuts (TikTok styl)
 
 **Scénář:**  
-> „250+ lídrů to už udělalo. T-Mobile, Volkswagen, Mondelēz. (jump cut) Další ročník startuje 13. března. (jump cut) Místa se plní. Teď je na tobě — budeš mezi těmi, kdo to udělali dřív? Nebo budeš čekat?"
+> „250+ lídrů to už udělalo. Z předních firem. (jump cut) Další ročník startuje 13. března. (jump cut) Místa se plní. Teď je na tobě — budeš mezi těmi, kdo to udělali dřív? Nebo budeš čekat?"
 
 **Ad copy k videu (varianta 1 — cold audience):**
 > ⏳ Další ročník Future AI Leader startuje 13. března 2026.  
