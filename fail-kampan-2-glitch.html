@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAIL Kampaň 2 — GLITCH IN THE SYSTEM</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #111; color: #fff; font-family: 'DM Sans', sans-serif; padding: 40px; }
+  h1 { font-family: 'Outfit', sans-serif; font-size: 42px; font-weight: 800; text-align: center; margin-bottom: 10px; }
+  h1 span { background: linear-gradient(135deg, #00FF88, #4FC3F7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .subtitle { text-align: center; color: #9CA3AF; font-size: 16px; margin-bottom: 50px; }
+  .section-title { font-family: 'Outfit', sans-serif; font-size: 24px; font-weight: 700; margin: 50px 0 20px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .row { display: flex; gap: 40px; flex-wrap: wrap; justify-content: center; margin-bottom: 40px; }
+  .label { text-align: center; font-size: 12px; color: #6B7280; margin-top: 8px; letter-spacing: 2px; text-transform: uppercase; }
+
+  /* ============ BANNER BASE ============ */
+  .banner { position: relative; overflow: hidden; font-family: 'JetBrains Mono', monospace; }
+  .banner-1x1 { width: 360px; height: 360px; }
+  .banner-9x16 { width: 360px; height: 640px; }
+
+  /* ============ TERMINAL THEME ============ */
+  .terminal-bg {
+    background: #0a0e14;
+    border: 1px solid rgba(0,255,136,0.15);
+  }
+  .terminal-bg::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,255,136,0.015) 2px, rgba(0,255,136,0.015) 4px);
+    pointer-events: none; z-index: 1;
+  }
+
+  /* Scanline animation */
+  .scanline {
+    position: absolute; left: 0; right: 0; height: 4px; z-index: 5;
+    background: linear-gradient(180deg, transparent, rgba(0,255,136,0.08), transparent);
+    animation: scanline 4s linear infinite;
+    pointer-events: none;
+  }
+  @keyframes scanline {
+    0% { top: -4px; }
+    100% { top: 100%; }
+  }
+
+  /* Blinking cursor */
+  .cursor-blink::after {
+    content: '█';
+    animation: blink 1s step-end infinite;
+    color: #00FF88;
+  }
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  /* Terminal header bar */
+  .term-header {
+    display: flex; align-items: center; gap: 6px;
+    padding: 10px 14px;
+    background: rgba(0,255,136,0.06);
+    border-bottom: 1px solid rgba(0,255,136,0.1);
+    position: relative; z-index: 10;
+  }
+  .term-dot { width: 8px; height: 8px; border-radius: 50%; }
+  .term-dot-red { background: #FF5F56; }
+  .term-dot-yellow { background: #FFBD2E; }
+  .term-dot-green { background: #27C93F; }
+  .term-title {
+    flex: 1; text-align: center; font-size: 10px; color: rgba(0,255,136,0.5);
+    letter-spacing: 2px; text-transform: uppercase;
+  }
+
+  /* Terminal content area */
+  .term-body {
+    padding: 16px; position: relative; z-index: 10;
+    display: flex; flex-direction: column; flex: 1;
+  }
+  .term-line {
+    display: flex; align-items: flex-start; gap: 8px; margin-bottom: 6px;
+    font-size: 11px; line-height: 1.5;
+  }
+  .term-prompt { color: #00FF88; flex-shrink: 0; }
+  .term-cmd { color: #E5E7EB; }
+  .term-output { color: #6B7280; }
+  .term-error { color: #FF5F56; }
+  .term-success { color: #00FF88; }
+  .term-warning { color: #FFBD2E; }
+  .term-highlight { color: #4FC3F7; }
+  .term-comment { color: #546E7A; font-style: italic; }
+
+  /* FAIL logo in terminal */
+  .fail-logo {
+    font-family: 'Outfit', sans-serif; font-weight: 800; text-align: center;
+    padding: 12px; position: relative; z-index: 10;
+  }
+  .fail-logo .main { font-size: 18px; color: #fff; }
+  .fail-logo .main .gold { color: #FBBF24; }
+  .fail-logo .sub { font-size: 10px; color: rgba(0,255,136,0.6); letter-spacing: 3px; text-transform: uppercase; margin-top: 2px; }
+
+  /* CTA */
+  .term-cta {
+    padding: 12px 16px; text-align: center;
+    border-top: 1px solid rgba(0,255,136,0.15);
+    position: relative; z-index: 10;
+    background: rgba(0,255,136,0.03);
+  }
+  .term-cta-btn {
+    display: inline-block; padding: 8px 24px; border-radius: 4px;
+    border: 1px solid #00FF88; color: #00FF88;
+    font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700;
+    text-decoration: none; letter-spacing: 1px; text-transform: uppercase;
+    box-shadow: 0 0 15px rgba(0,255,136,0.2), inset 0 0 15px rgba(0,255,136,0.05);
+    transition: all 0.3s;
+  }
+  .term-cta-btn:hover {
+    background: rgba(0,255,136,0.1);
+    box-shadow: 0 0 30px rgba(0,255,136,0.4);
+  }
+
+  /* Progress bar */
+  .progress-bar {
+    height: 3px; border-radius: 2px; overflow: hidden;
+    background: rgba(0,255,136,0.1); margin: 6px 0;
+  }
+  .progress-fill {
+    height: 100%; border-radius: 2px;
+    background: linear-gradient(90deg, #00FF88, #4FC3F7);
+    box-shadow: 0 0 10px rgba(0,255,136,0.5);
+  }
+
+  /* 9:16 adjustments */
+  .banner-9x16 .term-body { padding: 20px; }
+  .banner-9x16 .term-line { font-size: 13px; margin-bottom: 10px; }
+  .banner-9x16 .fail-logo .main { font-size: 22px; }
+  .banner-9x16 .fail-logo .sub { font-size: 12px; }
+  .banner-9x16 .term-cta { padding: 16px 20px; }
+  .banner-9x16 .term-cta-btn { padding: 10px 28px; font-size: 14px; }
+  .banner-9x16 .term-header { padding: 12px 16px; }
+
+  /* ASCII ART */
+  .ascii-art {
+    font-size: 8px; line-height: 1.2; color: rgba(0,255,136,0.3);
+    text-align: center; margin: 6px 0;
+    white-space: pre;
+  }
+  .banner-9x16 .ascii-art { font-size: 10px; }
+
+  /* Glitch effect on text */
+  .glitch-text {
+    position: relative;
+    text-shadow: 2px 0 #FF5F56, -2px 0 #4FC3F7;
+    animation: glitch-shift 3s infinite;
+  }
+  @keyframes glitch-shift {
+    0%, 95%, 100% { text-shadow: none; }
+    96% { text-shadow: 2px 0 #FF5F56, -2px 0 #4FC3F7; }
+    97% { text-shadow: -2px 0 #FF5F56, 2px 0 #4FC3F7; }
+    98% { text-shadow: 2px 1px #FF5F56, -2px -1px #4FC3F7; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Kampaň 2: <span>GLITCH IN THE SYSTEM</span></h1>
+<p class="subtitle">Terminálová estetika — „V tvém systému je chyba. My ji najdeme."</p>
+
+<!-- ==================== VARIANTA A: System Scan ==================== -->
+<div class="section-title">Varianta A — „System Scan" (diagnostika)</div>
+<div class="row">
+
+  <!-- 1:1 -->
+  <div>
+    <div class="banner banner-1x1 terminal-bg" style="display: flex; flex-direction: column;">
+      <div class="scanline"></div>
+
+      <div class="term-header">
+        <div class="term-dot term-dot-red"></div>
+        <div class="term-dot term-dot-yellow"></div>
+        <div class="term-dot term-dot-green"></div>
+        <div class="term-title">fail diagnostics v2.6</div>
+      </div>
+
+      <div class="term-body" style="flex: 1; justify-content: center;">
+        <div class="term-line">
+          <span class="term-prompt">$</span>
+          <span class="term-cmd">fail scan --deep</span>
+        </div>
+        <div class="term-line">
+          <span class="term-output">[scan] Analyzuji vaši AI strategii...</span>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" style="width: 87%;"></div></div>
+        <div class="term-line" style="margin-top: 6px;">
+          <span class="term-error">⚠ 3 kritické mezery nalezeny:</span>
+        </div>
+        <div class="term-line">
+          <span class="term-error" style="padding-left: 16px;">→ leadership AI mindset: 12%</span>
+        </div>
+        <div class="term-line">
+          <span class="term-warning" style="padding-left: 16px;">→ automatizace procesů: 23%</span>
+        </div>
+        <div class="term-line">
+          <span class="term-warning" style="padding-left: 16px;">→ AI agenti v workflow: 0%</span>
+        </div>
+        <div class="term-line" style="margin-top: 8px;">
+          <span class="term-success">→ Doporučení: spustit fail --fix</span>
+        </div>
+      </div>
+
+      <div class="term-cta">
+        <a href="#" class="term-cta-btn">$ fail --fix →</a>
+      </div>
+    </div>
+    <div class="label">1:1 Feed</div>
+  </div>
+
+  <!-- 9:16 -->
+  <div>
+    <div class="banner banner-9x16 terminal-bg" style="display: flex; flex-direction: column;">
+      <div class="scanline"></div>
+
+      <div class="term-header">
+        <div class="term-dot term-dot-red"></div>
+        <div class="term-dot term-dot-yellow"></div>
+        <div class="term-dot term-dot-green"></div>
+        <div class="term-title">fail diagnostics v2.6</div>
+      </div>
+
+      <div class="fail-logo">
+        <div class="main"><span style="color: #fff;">Future AI Leader</span> <span class="gold">2026</span></div>
+        <div class="sub">system diagnostic</div>
+      </div>
+
+      <div class="term-body" style="flex: 1; justify-content: center;">
+        <div class="term-line">
+          <span class="term-prompt">$</span>
+          <span class="term-cmd">fail scan --deep</span>
+        </div>
+        <div class="term-line">
+          <span class="term-output">[scan] Analyzuji vaši AI strategii...</span>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" style="width: 87%;"></div></div>
+        <div style="height: 12px;"></div>
+        <div class="term-line">
+          <span class="term-error">⚠ 3 kritické mezery nalezeny:</span>
+        </div>
+        <div style="height: 6px;"></div>
+        <div class="term-line">
+          <span class="term-error" style="padding-left: 16px;">→ leadership AI mindset</span>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" style="width: 12%; background: #FF5F56;"></div></div>
+        <div style="height: 8px;"></div>
+        <div class="term-line">
+          <span class="term-warning" style="padding-left: 16px;">→ automatizace procesů</span>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" style="width: 23%; background: #FFBD2E;"></div></div>
+        <div style="height: 8px;"></div>
+        <div class="term-line">
+          <span class="term-warning" style="padding-left: 16px;">→ AI agenti v workflow</span>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" style="width: 0%;"></div></div>
+        <div style="height: 14px;"></div>
+        <div class="term-line">
+          <span class="term-success">✓ Doporučení: spustit fail --fix</span>
+        </div>
+        <div class="term-line">
+          <span class="term-comment"># oprava trvá 8 měsíců, ne 8 let</span>
+        </div>
+      </div>
+
+      <div class="term-cta">
+        <a href="#" class="term-cta-btn">$ fail --fix →</a>
+      </div>
+    </div>
+    <div class="label">9:16 Story / Reel</div>
+  </div>
+</div>
+
+<!-- ==================== VARIANTA B: Error Log ==================== -->
+<div class="section-title">Varianta B — „Error Log" (chybové hlášky)</div>
+<div class="row">
+
+  <!-- 1:1 -->
+  <div>
+    <div class="banner banner-1x1 terminal-bg" style="display: flex; flex-direction: column;">
+      <div class="scanline"></div>
+
+      <div class="term-header">
+        <div class="term-dot term-dot-red"></div>
+        <div class="term-dot term-dot-yellow"></div>
+        <div class="term-dot term-dot-green"></div>
+        <div class="term-title">error_log.txt</div>
+      </div>
+
+      <div class="term-body" style="flex: 1; justify-content: center;">
+        <div class="term-line">
+          <span class="term-error">[ERR] 09:00</span>
+          <span class="term-output">Manuální report = 4h</span>
+        </div>
+        <div class="term-line">
+          <span class="term-error">[ERR] 13:00</span>
+          <span class="term-output">Meeting o meetingu</span>
+        </div>
+        <div class="term-line">
+          <span class="term-error">[ERR] 16:00</span>
+          <span class="term-output">Copy-paste strategie</span>
+        </div>
+        <div class="term-line">
+          <span class="term-error">[ERR] 17:30</span>
+          <span class="term-output">„AI? To není priorita"</span>
+        </div>
+        <div style="height: 10px;"></div>
+        <div class="term-line">
+          <span class="term-warning">[WARN] Tento systém je zastaralý.</span>
+        </div>
+        <div class="term-line">
+          <span class="term-success">[FIX] → fail --upgrade</span>
+        </div>
+      </div>
+
+      <div class="term-cta">
+        <a href="#" class="term-cta-btn">spustit upgrade →</a>
+      </div>
+    </div>
+    <div class="label">1:1 Feed</div>
+  </div>
+
+  <!-- 9:16 -->
+  <div>
+    <div class="banner banner-9x16 terminal-bg" style="display: flex; flex-direction: column;">
+      <div class="scanline"></div>
+
+      <div class="term-header">
+        <div class="term-dot term-dot-red"></div>
+        <div class="term-dot term-dot-yellow"></div>
+        <div class="term-dot term-dot-green"></div>
+        <div class="term-title">error_log.txt</div>
+      </div>
+
+      <div class="fail-logo">
+        <div class="main"><span style="color: #fff;">Future AI Leader</span> <span class="gold">2026</span></div>
+        <div class="sub">system errors detected</div>
+      </div>
+
+      <div class="term-body" style="flex: 1; justify-content: center;">
+        <div class="term-line">
+          <span class="term-error">[ERR] 08:00</span>
+          <span class="term-output">47 nepřečtených mailů</span>
+        </div>
+        <div style="height: 4px;"></div>
+        <div class="term-line">
+          <span class="term-error">[ERR] 09:00</span>
+          <span class="term-output">Manuální report = 4 hodiny</span>
+        </div>
+        <div style="height: 4px;"></div>
+        <div class="term-line">
+          <span class="term-error">[ERR] 11:30</span>
+          <span class="term-output">Meeting o meetingu o meetingu</span>
+        </div>
+        <div style="height: 4px;"></div>
+        <div class="term-line">
+          <span class="term-error">[ERR] 13:00</span>
+          <span class="term-output">Copy-paste = strategie?</span>
+        </div>
+        <div style="height: 4px;"></div>
+        <div class="term-line">
+          <span class="term-error">[ERR] 15:00</span>
+          <span class="term-output">Tým: „AI? Nemáme čas"</span>
+        </div>
+        <div style="height: 4px;"></div>
+        <div class="term-line">
+          <span class="term-error">[ERR] 17:30</span>
+          <span class="term-output">Konkurence nasadila AI agenty</span>
+        </div>
+
+        <div style="height: 16px;"></div>
+        <div style="border: 1px solid rgba(255,95,86,0.3); border-radius: 6px; padding: 12px; background: rgba(255,95,86,0.05);">
+          <div class="term-line" style="margin-bottom: 2px;">
+            <span class="term-warning">[WARN] Nalezeno 6 kritických chyb.</span>
+          </div>
+          <div class="term-line" style="margin-bottom: 0;">
+            <span class="term-comment"># Váš operační systém potřebuje update.</span>
+          </div>
+        </div>
+        <div style="height: 12px;"></div>
+        <div class="term-line">
+          <span class="term-success">✓ [FIX] fail --upgrade --now</span>
+        </div>
+      </div>
+
+      <div class="term-cta">
+        <a href="#" class="term-cta-btn">spustit upgrade →</a>
+      </div>
+    </div>
+    <div class="label">9:16 Story / Reel</div>
+  </div>
+</div>
+
+<!-- ==================== VARIANTA C: Testimonial Terminal ==================== -->
+<div class="section-title">Varianta C — „Success Log" (testimonial v terminálu)</div>
+<div class="row">
+
+  <!-- 1:1 -->
+  <div>
+    <div class="banner banner-1x1 terminal-bg" style="display: flex; flex-direction: column;">
+      <div class="scanline"></div>
+
+      <div class="term-header">
+        <div class="term-dot term-dot-red"></div>
+        <div class="term-dot term-dot-yellow"></div>
+        <div class="term-dot term-dot-green"></div>
+        <div class="term-title">success.log</div>
+      </div>
+
+      <div class="term-body" style="flex: 1; justify-content: center;">
+        <div class="term-line">
+          <span class="term-prompt">$</span>
+          <span class="term-cmd">fail --results</span>
+        </div>
+        <div style="height: 6px;"></div>
+        <div class="term-line">
+          <span class="term-success">[OK]</span>
+          <span class="term-output">pavla_e.feedback</span>
+        </div>
+        <div style="padding-left: 30px; margin-bottom: 8px;">
+          <span style="color: #E5E7EB; font-size: 11px; font-style: italic;">„Ušetřila jsem firmě 660 000 Kč<br>&nbsp;&nbsp;pomocí AI automatizace."</span>
+        </div>
+        <div class="term-line">
+          <span class="term-success">[OK]</span>
+          <span class="term-output">kristina_k.feedback</span>
+        </div>
+        <div style="padding-left: 30px; margin-bottom: 8px;">
+          <span style="color: #E5E7EB; font-size: 11px; font-style: italic;">„2 týdny práce za jeden večer."</span>
+        </div>
+        <div style="height: 4px;"></div>
+        <div class="term-line">
+          <span class="term-highlight">→ 500+ lídrů v systému</span>
+        </div>
+      </div>
+
+      <div class="term-cta">
+        <a href="#" class="term-cta-btn">$ fail --join →</a>
+      </div>
+    </div>
+    <div class="label">1:1 Feed</div>
+  </div>
+
+  <!-- 9:16 -->
+  <div>
+    <div class="banner banner-9x16 terminal-bg" style="display: flex; flex-direction: column;">
+      <div class="scanline"></div>
+
+      <div class="term-header">
+        <div class="term-dot term-dot-red"></div>
+        <div class="term-dot term-dot-yellow"></div>
+        <div class="term-dot term-dot-green"></div>
+        <div class="term-title">success.log</div>
+      </div>
+
+      <div class="fail-logo">
+        <div class="main"><span style="color: #fff;">Future AI Leader</span> <span class="gold">2026</span></div>
+        <div class="sub">verified results</div>
+      </div>
+
+      <div class="term-body" style="flex: 1; justify-content: center;">
+        <div class="term-line">
+          <span class="term-prompt">$</span>
+          <span class="term-cmd">fail --results --verified</span>
+        </div>
+        <div style="height: 10px;"></div>
+
+        <!-- Testimonial 1 -->
+        <div style="border: 1px solid rgba(0,255,136,0.15); border-radius: 6px; padding: 12px; margin-bottom: 12px; background: rgba(0,255,136,0.03);">
+          <div class="term-line" style="margin-bottom: 4px;">
+            <span class="term-success">[OK]</span>
+            <span class="term-cmd">pavla_e.log</span>
+          </div>
+          <div style="padding-left: 8px;">
+            <span style="color: #E5E7EB; font-size: 13px; font-style: italic; line-height: 1.6;">„Ušetřila jsem firmě<br>660 000 Kč pomocí<br>AI automatizace."</span>
+          </div>
+          <div class="term-line" style="margin-top: 6px; margin-bottom: 0;">
+            <span class="term-comment"># ROI: 1100%</span>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div style="border: 1px solid rgba(0,255,136,0.15); border-radius: 6px; padding: 12px; margin-bottom: 12px; background: rgba(0,255,136,0.03);">
+          <div class="term-line" style="margin-bottom: 4px;">
+            <span class="term-success">[OK]</span>
+            <span class="term-cmd">kristina_k.log</span>
+          </div>
+          <div style="padding-left: 8px;">
+            <span style="color: #E5E7EB; font-size: 13px; font-style: italic; line-height: 1.6;">„2 týdny práce<br>za jeden večer."</span>
+          </div>
+          <div class="term-line" style="margin-top: 6px; margin-bottom: 0;">
+            <span class="term-comment"># time_saved: 95%</span>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div style="border: 1px solid rgba(0,255,136,0.15); border-radius: 6px; padding: 12px; background: rgba(0,255,136,0.03);">
+          <div class="term-line" style="margin-bottom: 4px;">
+            <span class="term-success">[OK]</span>
+            <span class="term-cmd">darja_s.log</span>
+          </div>
+          <div style="padding-left: 8px;">
+            <span style="color: #E5E7EB; font-size: 13px; font-style: italic; line-height: 1.6;">„Konečně vím, jak AI<br>použít systematicky."</span>
+          </div>
+          <div class="term-line" style="margin-top: 6px; margin-bottom: 0;">
+            <span class="term-comment"># confidence: 100%</span>
+          </div>
+        </div>
+
+        <div style="height: 10px;"></div>
+        <div class="term-line">
+          <span class="term-highlight">→ Total users in system: 500+</span>
+        </div>
+      </div>
+
+      <div class="term-cta">
+        <a href="#" class="term-cta-btn">$ fail --join →</a>
+      </div>
+    </div>
+    <div class="label">9:16 Story / Reel</div>
+  </div>
+</div>
+
+<!-- ==================== CAROUSEL — GLITCH ==================== -->
+<div class="section-title">Carousel — 5 slidů (LinkedIn / Instagram)</div>
+<div class="row" style="gap: 20px;">
+
+  <!-- Slide 1: Hook -->
+  <div>
+    <div class="banner banner-1x1 terminal-bg" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+      <div class="scanline"></div>
+      <div style="position: relative; z-index: 10; padding: 30px;">
+        <div class="ascii-art">
+ ______   ___   ___   _
+|  ____| / _ \ |_ _| | |
+| |__   / /_\ \ | |  | |
+|  __|  |  _  | | |  | |___
+|_|     |_| |_||___| |_____|
+        </div>
+        <div style="height: 16px;"></div>
+        <p style="font-family: 'JetBrains Mono', monospace; font-size: 20px; color: #00FF88; font-weight: 700;" class="glitch-text cursor-blink">
+          V tvém systému je chyba
+        </p>
+        <div style="height: 12px;"></div>
+        <p style="font-size: 11px; color: #546E7A;">swipni pro diagnostiku →</p>
+      </div>
+    </div>
+    <div class="label">Slide 1 — Hook</div>
+  </div>
+
+  <!-- Slide 2: Error -->
+  <div>
+    <div class="banner banner-1x1 terminal-bg" style="display: flex; flex-direction: column;">
+      <div class="scanline"></div>
+      <div class="term-header">
+        <div class="term-dot term-dot-red"></div>
+        <div class="term-dot term-dot-yellow"></div>
+        <div class="term-dot term-dot-green"></div>
+        <div class="term-title">diagnostic.sh</div>
+      </div>
+      <div class="term-body" style="flex: 1; justify-content: center;">
+        <div class="term-line"><span class="term-prompt">$</span><span class="term-cmd">fail scan --your-week</span></div>
+        <div style="height: 8px;"></div>
+        <div class="term-line"><span class="term-error">[ERR]</span><span class="term-output">Pondělí: 47 mailů, 0 systém</span></div>
+        <div class="term-line"><span class="term-error">[ERR]</span><span class="term-output">Úterý: meeting ≠ akce</span></div>
+        <div class="term-line"><span class="term-error">[ERR]</span><span class="term-output">Středa: report trvá 4h</span></div>
+        <div class="term-line"><span class="term-error">[ERR]</span><span class="term-output">Čtvrtek: copy-paste strategie</span></div>
+        <div class="term-line"><span class="term-error">[ERR]</span><span class="term-output">Pátek: „příští týden AI"</span></div>
+        <div style="height: 10px;"></div>
+        <div class="term-line"><span class="term-warning">[WARN] Pattern detected: prokrastinace</span></div>
+      </div>
+    </div>
+    <div class="label">Slide 2 — Pain</div>
+  </div>
+
+  <!-- Slide 3: Fix -->
+  <div>
+    <div class="banner banner-1x1 terminal-bg" style="display: flex; flex-direction: column;">
+      <div class="scanline"></div>
+      <div class="term-header">
+        <div class="term-dot term-dot-red"></div>
+        <div class="term-dot term-dot-yellow"></div>
+        <div class="term-dot term-dot-green"></div>
+        <div class="term-title">fix.sh</div>
+      </div>
+      <div class="term-body" style="flex: 1; justify-content: center;">
+        <div class="term-line"><span class="term-prompt">$</span><span class="term-cmd">fail --fix --install</span></div>
+        <div style="height: 8px;"></div>
+        <div class="term-line"><span class="term-success">[✓]</span><span class="term-cmd">AI Leadership mindset</span></div>
+        <div class="progress-bar"><div class="progress-fill" style="width: 100%;"></div></div>
+        <div style="height: 6px;"></div>
+        <div class="term-line"><span class="term-success">[✓]</span><span class="term-cmd">Automatizace s AI agenty</span></div>
+        <div class="progress-bar"><div class="progress-fill" style="width: 100%;"></div></div>
+        <div style="height: 6px;"></div>
+        <div class="term-line"><span class="term-success">[✓]</span><span class="term-cmd">Hands-on praxe</span></div>
+        <div class="progress-bar"><div class="progress-fill" style="width: 100%;"></div></div>
+        <div style="height: 6px;"></div>
+        <div class="term-line"><span class="term-success">[✓]</span><span class="term-cmd">Community 500+ lídrů</span></div>
+        <div class="progress-bar"><div class="progress-fill" style="width: 100%;"></div></div>
+        <div style="height: 10px;"></div>
+        <div class="term-line"><span class="term-highlight">All modules installed ✓</span></div>
+      </div>
+    </div>
+    <div class="label">Slide 3 — Solution</div>
+  </div>
+
+  <!-- Slide 4: Proof -->
+  <div>
+    <div class="banner banner-1x1 terminal-bg" style="display: flex; flex-direction: column;">
+      <div class="scanline"></div>
+      <div class="term-header">
+        <div class="term-dot term-dot-red"></div>
+        <div class="term-dot term-dot-yellow"></div>
+        <div class="term-dot term-dot-green"></div>
+        <div class="term-title">success.log</div>
+      </div>
+      <div class="term-body" style="flex: 1; justify-content: center;">
+        <div class="term-line"><span class="term-prompt">$</span><span class="term-cmd">fail --results</span></div>
+        <div style="height: 8px;"></div>
+        <div style="border: 1px solid rgba(0,255,136,0.15); border-radius: 4px; padding: 10px; margin-bottom: 8px;">
+          <span style="color: #00FF88; font-size: 11px;">[OK]</span>
+          <span style="color: #E5E7EB; font-size: 11px; font-style: italic;"> „660 000 Kč úspora" — Pavla</span>
+        </div>
+        <div style="border: 1px solid rgba(0,255,136,0.15); border-radius: 4px; padding: 10px; margin-bottom: 8px;">
+          <span style="color: #00FF88; font-size: 11px;">[OK]</span>
+          <span style="color: #E5E7EB; font-size: 11px; font-style: italic;"> „2 týdny → 1 večer" — Kristina</span>
+        </div>
+        <div style="height: 8px;"></div>
+        <div class="term-line"><span class="term-highlight">→ 500+ verified users</span></div>
+        <div class="term-line"><span class="term-comment"># T-Mobile, VW, Mondelēz...</span></div>
+      </div>
+    </div>
+    <div class="label">Slide 4 — Proof</div>
+  </div>
+
+  <!-- Slide 5: CTA -->
+  <div>
+    <div class="banner banner-1x1 terminal-bg" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+      <div class="scanline"></div>
+      <div style="position: relative; z-index: 10; padding: 30px;">
+        <p style="font-size: 10px; color: #546E7A; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px;">ready to install?</p>
+        <p style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 26px; color: #fff; line-height: 1.2;">
+          FUTURE<br>AI LEADER
+        </p>
+        <p style="color: #FBBF24; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 18px; margin-top: 4px;">2026</p>
+        <div style="height: 20px;"></div>
+        <a href="#" class="term-cta-btn" style="font-size: 14px; padding: 12px 32px;">$ fail --join →</a>
+        <div style="height: 12px;"></div>
+        <p style="font-size: 10px; color: #546E7A;">aipredictions.cz/future-ai-leader</p>
+      </div>
+    </div>
+    <div class="label">Slide 5 — CTA</div>
+  </div>
+
+</div>
+
+</body>
+</html>

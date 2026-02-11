@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAIL Kampaň 3 — BEFORE THEY DID</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #111; color: #fff; font-family: 'DM Sans', sans-serif; padding: 40px; }
+  h1 { font-family: 'Outfit', sans-serif; font-size: 42px; font-weight: 800; text-align: center; margin-bottom: 10px; }
+  h1 span { background: linear-gradient(135deg, #FBBF24, #FF6B8A); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .subtitle { text-align: center; color: #9CA3AF; font-size: 16px; margin-bottom: 50px; }
+  .section-title { font-family: 'Outfit', sans-serif; font-size: 24px; font-weight: 700; margin: 50px 0 20px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .row { display: flex; gap: 40px; flex-wrap: wrap; justify-content: center; margin-bottom: 40px; }
+  .label { text-align: center; font-size: 12px; color: #6B7280; margin-top: 8px; letter-spacing: 2px; text-transform: uppercase; }
+
+  /* ============ BANNER BASE ============ */
+  .banner { position: relative; overflow: hidden; }
+  .banner-1x1 { width: 360px; height: 360px; }
+  .banner-9x16 { width: 360px; height: 640px; }
+
+  /* ============ EDITORIAL THEME ============ */
+  .editorial-bg {
+    background: #0c0c0c;
+  }
+
+  /* Grain texture overlay */
+  .grain-overlay {
+    position: absolute; inset: 0; z-index: 3;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+
+  /* Accent line */
+  .accent-line {
+    width: 40px; height: 3px; border-radius: 2px;
+    background: linear-gradient(90deg, #FBBF24, #FF6B8A);
+    box-shadow: 0 0 12px rgba(255,107,138,0.4);
+  }
+
+  /* Editorial typography */
+  .editorial-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 800; letter-spacing: -0.5px;
+  }
+  .editorial-sans {
+    font-family: 'Outfit', sans-serif;
+  }
+
+  /* Gold accent */
+  .gold { color: #FBBF24; }
+  .gold-light { color: rgba(251,191,36,0.7); }
+
+  /* Glass card */
+  .glass-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px; padding: 14px;
+    backdrop-filter: blur(10px);
+  }
+  .glass-card-gold {
+    background: rgba(251,191,36,0.04);
+    border: 1px solid rgba(251,191,36,0.15);
+    border-radius: 12px; padding: 14px;
+  }
+
+  /* Magazine stamp */
+  .stamp {
+    display: inline-block; padding: 4px 10px;
+    border: 2px solid #FBBF24; border-radius: 2px;
+    font-family: 'Outfit', sans-serif; font-weight: 800;
+    font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+    color: #FBBF24; transform: rotate(-3deg);
+  }
+  .stamp-red {
+    border-color: #FF3366; color: #FF3366;
+  }
+
+  /* Timeline dot */
+  .timeline-dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: #FBBF24; flex-shrink: 0;
+    box-shadow: 0 0 10px rgba(251,191,36,0.4);
+  }
+  .timeline-line {
+    width: 2px; flex-shrink: 0; background: rgba(251,191,36,0.2);
+  }
+
+  /* Corporate logos grid */
+  .logo-tag {
+    display: inline-block; padding: 3px 8px;
+    background: rgba(255,255,255,0.06); border-radius: 4px;
+    font-size: 10px; color: #9CA3AF; font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  /* CTA */
+  .editorial-cta {
+    display: inline-block; padding: 10px 28px; border-radius: 50px;
+    background: linear-gradient(135deg, #FBBF24, #FF6B8A);
+    color: #0c0c0c; font-family: 'Outfit', sans-serif;
+    font-weight: 700; font-size: 13px; text-decoration: none;
+    box-shadow: 0 4px 20px rgba(251,191,36,0.3);
+  }
+  .editorial-cta-outline {
+    display: inline-block; padding: 8px 24px; border-radius: 50px;
+    border: 1.5px solid #FBBF24; color: #FBBF24;
+    font-family: 'Outfit', sans-serif; font-weight: 700;
+    font-size: 12px; text-decoration: none; letter-spacing: 0.5px;
+  }
+
+  /* Subtle gradient atmosphere */
+  .atmo-1 { background: radial-gradient(ellipse at 30% 20%, rgba(251,191,36,0.06), transparent 50%); }
+  .atmo-2 { background: radial-gradient(ellipse at 70% 80%, rgba(255,107,138,0.05), transparent 50%); }
+</style>
+</head>
+<body>
+
+<h1>Kampaň 3: <span>BEFORE THEY DID</span></h1>
+<p class="subtitle">Editoriální styl — „Oni to udělali dřív. Teď jsi na řadě ty."</p>
+
+<!-- ==================== VARIANTA A: Timeline ==================== -->
+<div class="section-title">Varianta A — „Timeline" (příběhy lídrů)</div>
+<div class="row">
+
+  <!-- 1:1 -->
+  <div>
+    <div class="banner banner-1x1 editorial-bg" style="display: flex; flex-direction: column; justify-content: center; padding: 28px;">
+      <div class="grain-overlay"></div>
+      <div style="position: absolute; inset: 0;" class="atmo-1"></div>
+      <div style="position: absolute; inset: 0;" class="atmo-2"></div>
+
+      <div style="position: relative; z-index: 5;">
+        <!-- Header -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+          <div class="editorial-sans" style="font-size: 12px; font-weight: 700;">
+            <span style="color: #fff;">Future AI Leader</span>
+            <span class="gold"> 2026</span>
+          </div>
+          <div class="stamp">Case Study</div>
+        </div>
+
+        <!-- Quote -->
+        <p class="editorial-serif" style="font-size: 22px; color: #fff; line-height: 1.25; margin-bottom: 10px;">
+          „660 000 Kč<br>
+          <span style="color: #FBBF24;">ušetřeno</span> díky AI."
+        </p>
+        <div class="accent-line" style="margin-bottom: 10px;"></div>
+        <p style="font-size: 12px; color: #9CA3AF; margin-bottom: 12px;">— Pavla E., marketingová manažerka</p>
+
+        <!-- Mini timeline -->
+        <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 16px;">
+          <div class="timeline-dot" style="width: 6px; height: 6px;"></div>
+          <span style="font-size: 10px; color: #9CA3AF;">FAIL program</span>
+          <div style="flex: 1; height: 1px; background: rgba(251,191,36,0.2);"></div>
+          <span style="font-size: 10px; color: #FBBF24;">ROI 1100%</span>
+        </div>
+
+        <!-- CTA -->
+        <div style="text-align: center;">
+          <a href="#" class="editorial-cta">Chci taky →</a>
+        </div>
+      </div>
+    </div>
+    <div class="label">1:1 Feed</div>
+  </div>
+
+  <!-- 9:16 -->
+  <div>
+    <div class="banner banner-9x16 editorial-bg" style="display: flex; flex-direction: column; padding: 28px;">
+      <div class="grain-overlay"></div>
+      <div style="position: absolute; inset: 0;" class="atmo-1"></div>
+      <div style="position: absolute; inset: 0;" class="atmo-2"></div>
+
+      <div style="position: relative; z-index: 5; flex: 1; display: flex; flex-direction: column;">
+        <!-- Header -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+          <div class="editorial-sans" style="font-size: 14px; font-weight: 700;">
+            <span style="color: #fff;">Future AI Leader</span>
+            <span class="gold"> 2026</span>
+          </div>
+          <div class="stamp">Case Study</div>
+        </div>
+
+        <!-- Main content -->
+        <div style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
+          <!-- Hero quote -->
+          <p class="editorial-serif" style="font-size: 34px; color: #fff; line-height: 1.15; margin-bottom: 14px;">
+            „660 000 Kč<br>
+            <span style="color: #FBBF24;">ušetřeno</span><br>
+            díky AI."
+          </p>
+          <div class="accent-line" style="margin-bottom: 14px;"></div>
+
+          <p style="font-size: 14px; color: #9CA3AF; margin-bottom: 24px;">
+            — Pavla E.<br>
+            <span style="font-size: 12px; color: #6B7280;">Marketingová manažerka</span>
+          </p>
+
+          <!-- Timeline -->
+          <div style="display: flex; gap: 12px; margin-bottom: 24px;">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+              <div class="timeline-dot"></div>
+              <div class="timeline-line" style="flex: 1; min-height: 40px;"></div>
+              <div class="timeline-dot" style="background: #FF6B8A; box-shadow: 0 0 10px rgba(255,107,138,0.4);"></div>
+            </div>
+            <div style="display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <p style="font-size: 11px; color: #FBBF24; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 2px;">Před FAIL</p>
+                <p style="font-size: 13px; color: #9CA3AF;">Manuální procesy, bez systému</p>
+              </div>
+              <div>
+                <p style="font-size: 11px; color: #FF6B8A; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 2px;">Po FAIL</p>
+                <p style="font-size: 13px; color: #E5E7EB;">AI automatizace, ROI 1100%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div style="text-align: center; padding-bottom: 10px;">
+          <a href="#" class="editorial-cta" style="font-size: 15px; padding: 12px 36px;">Chci taky →</a>
+        </div>
+      </div>
+    </div>
+    <div class="label">9:16 Story / Reel</div>
+  </div>
+</div>
+
+<!-- ==================== VARIANTA B: Magazine Cover ==================== -->
+<div class="section-title">Varianta B — „Magazine Cover" (korporátní roster)</div>
+<div class="row">
+
+  <!-- 1:1 -->
+  <div>
+    <div class="banner banner-1x1 editorial-bg" style="display: flex; flex-direction: column; justify-content: center; padding: 24px;">
+      <div class="grain-overlay"></div>
+      <div style="position: absolute; inset: 0;" class="atmo-1"></div>
+
+      <div style="position: relative; z-index: 5;">
+        <!-- Header with logo tags -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+          <div class="editorial-sans" style="font-size: 11px; font-weight: 700;">
+            <span style="color: #fff;">FAIL</span>
+            <span class="gold"> 2026</span>
+          </div>
+          <div style="display: flex; gap: 4px;">
+            <div class="logo-tag">T-Mobile</div>
+            <div class="logo-tag">VW</div>
+            <div class="logo-tag">+</div>
+          </div>
+        </div>
+
+        <!-- Main headline -->
+        <p class="editorial-serif" style="font-size: 24px; color: #fff; line-height: 1.15; margin-bottom: 6px;">
+          Oni to udělali<br>
+          <span style="color: #FBBF24;">dřív.</span>
+        </p>
+        <p style="font-size: 13px; color: #9CA3AF; margin-bottom: 16px;">
+          500+ lídrů z T-Mobile, Volkswagen,<br>Mondelēz už s AI staví budoucnost.
+        </p>
+
+        <!-- Stats row -->
+        <div style="display: flex; gap: 8px; margin-bottom: 16px;">
+          <div class="glass-card" style="flex: 1; text-align: center; padding: 10px;">
+            <p class="editorial-sans gold" style="font-size: 22px; font-weight: 800;">500+</p>
+            <p style="font-size: 9px; color: #9CA3AF; letter-spacing: 1px;">LÍDRŮ</p>
+          </div>
+          <div class="glass-card" style="flex: 1; text-align: center; padding: 10px;">
+            <p class="editorial-sans gold" style="font-size: 22px; font-weight: 800;">8</p>
+            <p style="font-size: 9px; color: #9CA3AF; letter-spacing: 1px;">MĚSÍCŮ</p>
+          </div>
+          <div class="glass-card" style="flex: 1; text-align: center; padding: 10px;">
+            <p class="editorial-sans gold" style="font-size: 22px; font-weight: 800;">95%</p>
+            <p style="font-size: 9px; color: #9CA3AF; letter-spacing: 1px;">SPOKOJENO</p>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div style="text-align: center;">
+          <a href="#" class="editorial-cta">Přidej se →</a>
+        </div>
+      </div>
+    </div>
+    <div class="label">1:1 Feed</div>
+  </div>
+
+  <!-- 9:16 -->
+  <div>
+    <div class="banner banner-9x16 editorial-bg" style="display: flex; flex-direction: column; padding: 28px;">
+      <div class="grain-overlay"></div>
+      <div style="position: absolute; inset: 0;" class="atmo-1"></div>
+      <div style="position: absolute; inset: 0;" class="atmo-2"></div>
+
+      <div style="position: relative; z-index: 5; flex: 1; display: flex; flex-direction: column;">
+        <!-- Header -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+          <div class="editorial-sans" style="font-size: 14px; font-weight: 700;">
+            <span style="color: #fff;">Future AI Leader</span>
+            <span class="gold"> 2026</span>
+          </div>
+          <div class="stamp">Exkluzivní</div>
+        </div>
+
+        <!-- Main content -->
+        <div style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
+          <!-- Headline -->
+          <p class="editorial-serif" style="font-size: 36px; color: #fff; line-height: 1.1; margin-bottom: 12px;">
+            Oni to<br>udělali<br>
+            <span style="color: #FBBF24;">dřív.</span>
+          </p>
+          <div class="accent-line" style="margin-bottom: 14px;"></div>
+          <p style="font-size: 15px; color: #9CA3AF; line-height: 1.5; margin-bottom: 24px;">
+            500+ lídrů z T-Mobile,<br>
+            Volkswagen, Mondelēz<br>
+            už s AI staví budoucnost.
+          </p>
+
+          <!-- Logo tags -->
+          <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 20px;">
+            <div class="logo-tag" style="font-size: 11px;">T-Mobile</div>
+            <div class="logo-tag" style="font-size: 11px;">Volkswagen</div>
+            <div class="logo-tag" style="font-size: 11px;">Mondelēz</div>
+            <div class="logo-tag" style="font-size: 11px;">FNZ Group</div>
+          </div>
+
+          <!-- Stats -->
+          <div style="display: flex; gap: 10px; margin-bottom: 24px;">
+            <div class="glass-card-gold" style="flex: 1; text-align: center;">
+              <p class="editorial-sans gold" style="font-size: 28px; font-weight: 800;">500+</p>
+              <p style="font-size: 10px; color: #9CA3AF; letter-spacing: 1px;">ABSOLVENTŮ</p>
+            </div>
+            <div class="glass-card-gold" style="flex: 1; text-align: center;">
+              <p class="editorial-sans gold" style="font-size: 28px; font-weight: 800;">95%</p>
+              <p style="font-size: 10px; color: #9CA3AF; letter-spacing: 1px;">DOPORUČENÍ</p>
+            </div>
+          </div>
+
+          <!-- Quote -->
+          <div class="glass-card" style="margin-bottom: 20px;">
+            <p style="font-size: 13px; color: #E5E7EB; font-style: italic; line-height: 1.5; margin-bottom: 6px;">
+              „Konečně program, který není jen teorie."
+            </p>
+            <p style="font-size: 11px; color: #FBBF24;">— Absolvent, T-Mobile</p>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div style="text-align: center; padding-bottom: 10px;">
+          <a href="#" class="editorial-cta" style="font-size: 15px; padding: 12px 36px;">Přidej se →</a>
+        </div>
+      </div>
+    </div>
+    <div class="label">9:16 Story / Reel</div>
+  </div>
+</div>
+
+<!-- ==================== VARIANTA C: Urgency/FOMO ==================== -->
+<div class="section-title">Varianta C — „Countdown" (urgency &amp; FOMO)</div>
+<div class="row">
+
+  <!-- 1:1 -->
+  <div>
+    <div class="banner banner-1x1 editorial-bg" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 24px;">
+      <div class="grain-overlay"></div>
+      <div style="position: absolute; inset: 0;" class="atmo-2"></div>
+
+      <div style="position: relative; z-index: 5;">
+        <div class="editorial-sans" style="font-size: 12px; font-weight: 700; margin-bottom: 16px;">
+          <span style="color: #fff;">Future AI Leader</span>
+          <span class="gold"> 2026</span>
+        </div>
+
+        <div class="stamp-red stamp" style="margin-bottom: 16px;">Omezená kapacita</div>
+
+        <p class="editorial-serif" style="font-size: 44px; color: #fff; line-height: 1;">
+          <span style="color: #FF3366;">27</span>
+        </p>
+        <p style="font-size: 12px; color: #9CA3AF; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px;">volných míst</p>
+
+        <p style="font-size: 13px; color: #E5E7EB; margin-bottom: 16px;">
+          Další ročník startuje v září.<br>
+          <span style="color: #FBBF24;">Neváhej.</span>
+        </p>
+
+        <a href="#" class="editorial-cta">Rezervovat místo →</a>
+      </div>
+    </div>
+    <div class="label">1:1 Feed</div>
+  </div>
+
+  <!-- 9:16 -->
+  <div>
+    <div class="banner banner-9x16 editorial-bg" style="display: flex; flex-direction: column; padding: 28px;">
+      <div class="grain-overlay"></div>
+      <div style="position: absolute; inset: 0;" class="atmo-1"></div>
+      <div style="position: absolute; inset: 0;" class="atmo-2"></div>
+
+      <div style="position: relative; z-index: 5; flex: 1; display: flex; flex-direction: column;">
+        <!-- Header -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+          <div class="editorial-sans" style="font-size: 14px; font-weight: 700;">
+            <span style="color: #fff;">Future AI Leader</span>
+            <span class="gold"> 2026</span>
+          </div>
+          <div class="stamp stamp-red" style="font-size: 8px;">Limited</div>
+        </div>
+
+        <!-- Main content -->
+        <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; text-align: center;">
+          <p style="font-size: 12px; color: #9CA3AF; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 8px;">Zbývá pouze</p>
+          <p class="editorial-serif" style="font-size: 80px; color: #FF3366; line-height: 1; margin-bottom: 4px; text-shadow: 0 0 40px rgba(255,51,102,0.3);">27</p>
+          <p style="font-size: 14px; color: #9CA3AF; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 24px;">volných míst</p>
+
+          <div class="accent-line" style="margin: 0 auto 20px;"></div>
+
+          <p class="editorial-serif" style="font-size: 24px; color: #fff; line-height: 1.3; margin-bottom: 12px;">
+            Oni to udělali<br>
+            <span style="color: #FBBF24;">dřív.</span>
+          </p>
+          <p style="font-size: 14px; color: #9CA3AF; line-height: 1.6; margin-bottom: 24px;">
+            500+ lídrů z T-Mobile, Volkswagen<br>
+            a dalších firem prošlo FAIL<br>
+            programem.
+          </p>
+
+          <!-- Countdown boxes -->
+          <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 24px;">
+            <div class="glass-card-gold" style="padding: 10px 14px; text-align: center;">
+              <p class="editorial-sans gold" style="font-size: 24px; font-weight: 800;">14</p>
+              <p style="font-size: 8px; color: #9CA3AF; letter-spacing: 2px;">DNÍ</p>
+            </div>
+            <div class="glass-card-gold" style="padding: 10px 14px; text-align: center;">
+              <p class="editorial-sans gold" style="font-size: 24px; font-weight: 800;">08</p>
+              <p style="font-size: 8px; color: #9CA3AF; letter-spacing: 2px;">HODIN</p>
+            </div>
+            <div class="glass-card-gold" style="padding: 10px 14px; text-align: center;">
+              <p class="editorial-sans gold" style="font-size: 24px; font-weight: 800;">32</p>
+              <p style="font-size: 8px; color: #9CA3AF; letter-spacing: 2px;">MINUT</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div style="text-align: center; padding-bottom: 10px;">
+          <a href="#" class="editorial-cta" style="font-size: 15px; padding: 12px 36px;">Rezervovat místo →</a>
+          <p style="font-size: 11px; color: #6B7280; margin-top: 8px;">aipredictions.cz/future-ai-leader</p>
+        </div>
+      </div>
+    </div>
+    <div class="label">9:16 Story / Reel</div>
+  </div>
+</div>
+
+<!-- ==================== CAROUSEL — BEFORE THEY DID ==================== -->
+<div class="section-title">Carousel — 5 slidů (LinkedIn / Instagram)</div>
+<div class="row" style="gap: 20px;">
+
+  <!-- Slide 1: Hook -->
+  <div>
+    <div class="banner banner-1x1 editorial-bg" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 30px;">
+      <div class="grain-overlay"></div>
+      <div style="position: absolute; inset: 0;" class="atmo-1"></div>
+      <div style="position: relative; z-index: 5;">
+        <div class="stamp" style="margin-bottom: 20px;">Příběhy lídrů</div>
+        <p class="editorial-serif" style="font-size: 32px; color: #fff; line-height: 1.15;">
+          Oni to<br>udělali<br>
+          <span style="color: #FBBF24;">dřív.</span>
+        </p>
+        <div class="accent-line" style="margin: 16px auto;"></div>
+        <p style="font-size: 12px; color: #6B7280;">swipni →</p>
+      </div>
+    </div>
+    <div class="label">Slide 1 — Hook</div>
+  </div>
+
+  <!-- Slide 2: Pavla -->
+  <div>
+    <div class="banner banner-1x1 editorial-bg" style="display: flex; flex-direction: column; justify-content: center; padding: 28px;">
+      <div class="grain-overlay"></div>
+      <div style="position: absolute; inset: 0;" class="atmo-1"></div>
+      <div style="position: relative; z-index: 5;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+          <div class="logo-tag">Marketing</div>
+          <div class="stamp" style="font-size: 8px; padding: 3px 7px;">01/03</div>
+        </div>
+        <p class="editorial-serif" style="font-size: 26px; color: #fff; line-height: 1.2; margin-bottom: 10px;">
+          „660 000 Kč<br><span style="color: #FBBF24;">ušetřeno.</span>"
+        </p>
+        <div class="accent-line" style="margin-bottom: 10px;"></div>
+        <p style="font-size: 12px; color: #9CA3AF; margin-bottom: 10px;">Pavla E. nasadila AI automatizaci<br>a změnila celý marketingový tým.</p>
+        <div style="display: flex; gap: 8px;">
+          <div class="glass-card" style="flex: 1; text-align: center; padding: 8px;">
+            <p class="gold editorial-sans" style="font-weight: 800; font-size: 16px;">1100%</p>
+            <p style="font-size: 8px; color: #6B7280;">ROI</p>
+          </div>
+          <div class="glass-card" style="flex: 1; text-align: center; padding: 8px;">
+            <p class="gold editorial-sans" style="font-weight: 800; font-size: 16px;">3 měs.</p>
+            <p style="font-size: 8px; color: #6B7280;">NÁVRATNOST</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="label">Slide 2 — Case 1</div>
+  </div>
+
+  <!-- Slide 3: Kristina -->
+  <div>
+    <div class="banner banner-1x1 editorial-bg" style="display: flex; flex-direction: column; justify-content: center; padding: 28px;">
+      <div class="grain-overlay"></div>
+      <div style="position: absolute; inset: 0;" class="atmo-2"></div>
+      <div style="position: relative; z-index: 5;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+          <div class="logo-tag">Operations</div>
+          <div class="stamp" style="font-size: 8px; padding: 3px 7px;">02/03</div>
+        </div>
+        <p class="editorial-serif" style="font-size: 26px; color: #fff; line-height: 1.2; margin-bottom: 10px;">
+          „2 týdny<br>→ <span style="color: #FBBF24;">1 večer.</span>"
+        </p>
+        <div class="accent-line" style="margin-bottom: 10px;"></div>
+        <p style="font-size: 12px; color: #9CA3AF; margin-bottom: 10px;">Kristina K. zautomatizovala reporty<br>a získala zpět 95% svého času.</p>
+        <div style="display: flex; gap: 8px;">
+          <div class="glass-card" style="flex: 1; text-align: center; padding: 8px;">
+            <p class="gold editorial-sans" style="font-weight: 800; font-size: 16px;">95%</p>
+            <p style="font-size: 8px; color: #6B7280;">ÚSPORA ČASU</p>
+          </div>
+          <div class="glass-card" style="flex: 1; text-align: center; padding: 8px;">
+            <p class="gold editorial-sans" style="font-weight: 800; font-size: 16px;">1 večer</p>
+            <p style="font-size: 8px; color: #6B7280;">MÍSTO 2 TÝDNŮ</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="label">Slide 3 — Case 2</div>
+  </div>
+
+  <!-- Slide 4: Darja -->
+  <div>
+    <div class="banner banner-1x1 editorial-bg" style="display: flex; flex-direction: column; justify-content: center; padding: 28px;">
+      <div class="grain-overlay"></div>
+      <div style="position: absolute; inset: 0;" class="atmo-1"></div>
+      <div style="position: relative; z-index: 5;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+          <div class="logo-tag">Leadership</div>
+          <div class="stamp" style="font-size: 8px; padding: 3px 7px;">03/03</div>
+        </div>
+        <p class="editorial-serif" style="font-size: 24px; color: #fff; line-height: 1.2; margin-bottom: 10px;">
+          „Konečně vím,<br>jak AI <span style="color: #FBBF24;">systematicky.</span>"
+        </p>
+        <div class="accent-line" style="margin-bottom: 10px;"></div>
+        <p style="font-size: 12px; color: #9CA3AF; margin-bottom: 10px;">Darja S. přeměnila svůj tým<br>a teď vede AI strategii firmy.</p>
+        <div style="display: flex; gap: 8px;">
+          <div class="glass-card" style="flex: 1; text-align: center; padding: 8px;">
+            <p class="gold editorial-sans" style="font-weight: 800; font-size: 16px;">100%</p>
+            <p style="font-size: 8px; color: #6B7280;">CONFIDENCE</p>
+          </div>
+          <div class="glass-card" style="flex: 1; text-align: center; padding: 8px;">
+            <p class="gold editorial-sans" style="font-weight: 800; font-size: 16px;">Celá firma</p>
+            <p style="font-size: 8px; color: #6B7280;">DOPAD</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="label">Slide 4 — Case 3</div>
+  </div>
+
+  <!-- Slide 5: CTA -->
+  <div>
+    <div class="banner banner-1x1" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(145deg, #0c0c0c, #1a1206, #0c0c0c);">
+      <div class="grain-overlay"></div>
+      <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 50%, rgba(251,191,36,0.1), transparent 60%);"></div>
+      <div style="position: relative; z-index: 5; padding: 30px;">
+        <p class="editorial-serif" style="font-size: 28px; color: #fff; line-height: 1.2; margin-bottom: 6px;">
+          Teď jsi<br>na řadě<br><span style="color: #FBBF24;">ty.</span>
+        </p>
+        <div class="accent-line" style="margin: 12px auto;"></div>
+        <p style="font-size: 12px; color: #9CA3AF; margin-bottom: 20px;">Další ročník startuje v září 2026.</p>
+        <a href="#" class="editorial-cta" style="font-size: 14px; padding: 12px 32px;">Rezervovat místo →</a>
+        <p style="font-size: 10px; color: #6B7280; margin-top: 10px;">aipredictions.cz/future-ai-leader</p>
+      </div>
+    </div>
+    <div class="label">Slide 5 — CTA</div>
+  </div>
+
+</div>
+
+</body>
+</html>
