@@ -388,6 +388,287 @@
 ---
 ---
 
+---
+---
+
+## 🎬 VIDEO KONCEPTY S FILIPEM DŘÍMALKOU
+
+> **Kdo je Filip:** Přední český expert na AI, autor bestselleru „Budoucnost nepráce" (50 000+ prodaných kopií, vyšlo v USA, Jižní Koreji, Indii). Osobnost AI roku 2025. Založil Digiskills.cz a Aibility. Průvodce programem Future AI Leader.
+
+---
+
+### 🔴🔵 KAMPAŇ 1: THE SPLIT — Video s Filipem
+
+#### Video A — „Two Screens" (Reel/Story, 30–45 s)
+
+**Koncept:**  
+Split screen — na jedné polovině Filip ukazuje „starý svět" (ručně scrolluje maily, tvoří report v Excelu, sedí na meetingu), na druhé Filip ukazuje „nový svět" (zadává úkol AI agentovi, za sekundy má report, místo meetingu strategie). Obě poloviny běží synchronně.
+
+**Vizuál:**  
+- Levá polovina: červený tón, šedivý office, zpomalený čas, záměrně „šedý" color grading  
+- Pravá polovina: modrý/zelený tón, energický, clean desk, rychlé střihy  
+- Text overlay na screen divideru: **BEZ AI** | **S AI**
+
+**Scénář (Filip mluví do kamery z pravé strany):**  
+> „Dva lídři. Stejná firma. Stejná pozice. Jeden tráví 4 hodiny na reportu — druhý ho má za 12 minut. Rozdíl? Jeden ví, jak pracovat s AI. Na které straně jsi ty? (beat) Program Future AI Leader. 10 týdnů, které změní všechno."
+
+**CTA overlay (konec):**  
+`Future AI Leader 2026 · Start: 13. března · aipredictions.cz/future-ai-leader`
+
+**Ad copy k videu:**
+> Dvě strany jedné firmy. Jeden s AI. Druhý bez.  
+>  
+> Filip Dřímalka — autor bestselleru „Budoucnost nepráce" a Osobnost AI 2025 — ti ukáže, proč ten rozdíl roste každým dnem.  
+>  
+> 10týdenní program Future AI Leader. 250+ lídrů z T-Mobile, Volkswagen, Mondelēz.  
+>  
+> 👉 Zjisti víc →
+
+---
+
+#### Video B — „The Question" (Talking Head, 15–20 s)
+
+**Koncept:**  
+Filip sedí na tmavém pozadí, mluví přímo do kamery. Minimalistické, důvěrné. Žádné efekty — jen síla slova.
+
+**Scénář:**  
+> „Mám pro tebe jednoduchou otázku. Za posledních 12 měsíců — posunul ses v tom, jak pracuješ s AI? Nebo pořád jen copy-paste do ChatGPT? Protože svět se právě rozdělil. A ta správná strana je jenom jedna."
+
+**Text overlay:**  
+- Jméno + titulek: **Filip Dřímalka · Osobnost AI 2025**  
+- Konec: **Future AI Leader 2026 · 10 týdnů → aipredictions.cz/future-ai-leader**
+
+**Ad copy k videu:**
+> „Copy-paste do ChatGPT" ≠ práce s AI.  
+>  
+> Filip Dřímalka to říká na rovinu. Svět se rozdělil — a experimenty nestačí.  
+>  
+> 10 týdnů systematické práce s AI. Mindset, agenti, automatizace, komunita.  
+>  
+> 🎯 Start: 13. března 2026 →
+
+---
+
+#### Video C — „Before & After" (Carousel Video / Reel, 45–60 s)
+
+**Koncept:**  
+Filip provází diváka vizuálním „before/after" — ukazuje na screenu reálné ukázky (zamlžené/anonymizované): tabulka BEZ AI vs. workflow S AI. Styl: screen recording + talking head v rohu (PiP).
+
+**Scénář:**  
+> „Tohle je reálný pracovní den člověka, který AI nepoužívá. (ukázka: maily, Excel, zmatek) A tohle je den absolventa našeho programu. (ukázka: AI agent, automatizovaný report, 3 klíčové akce) Není to magie. Je to systém. A trvá 10 týdnů se ho naučit."
+
+**Ad copy k videu:**
+> Podívej se na rozdíl mezi „BEZ AI" a „S AI" — v reálném workflow.  
+>  
+> Filip Dřímalka ti ukáže, co se za 10 týdnů v programu Future AI Leader změní. Ne teorie. Hands-on praxe.  
+>  
+> 250+ lídrů to už udělalo. Kdy ty?  
+>  
+> 👉 Zjisti víc o programu →
+
+---
+---
+
+### 💚 KAMPAŇ 2: GLITCH IN THE SYSTEM — Video s Filipem
+
+#### Video A — „System Diagnostic" (Reel/Story, 30–45 s)
+
+**Koncept:**  
+Filip sedí u monitoru, na kterém „běží diagnostika" jeho AI systému. Glitch efekty, terminálový overlay na videu. Filip reaguje na výsledky skenování v reálném čase — komentuje chyby, které nachází.
+
+**Vizuál:**  
+- Zelený terminálový font přes video (overlay)  
+- Glitch efekty při přechodu mezi „chybami"  
+- Tmavé prostředí, podsvícení monitorem  
+- Na konci: zelený `[OK] UPGRADE COMPLETE`
+
+**Scénář:**  
+> „Spouštím diagnostiku. (pause, glitch) Tři kritické mezery nalezeny. Leadership AI mindset: 12 %. Automatizace procesů: 23 %. AI agenti v workflow: nula. (beat) Doporučení? Spustit upgrade. A přesně to je Future AI Leader. 10 týdnů. Od erroru k OK."
+
+**CTA overlay (konec):**  
+`$ fail --join · aipredictions.cz/future-ai-leader`
+
+**Ad copy k videu:**
+> `$ fail scan --deep`  
+> ⚠ 3 kritické mezery nalezeny.  
+>  
+> Filip Dřímalka spustil diagnostiku — a výsledky mluví jasně.  
+>  
+> Program Future AI Leader = upgrade tvého operačního systému. Za 10 týdnů. S praxí a komunitou 250+ lídrů.  
+>  
+> 👉 Spusť upgrade →
+
+---
+
+#### Video B — „Error vs. OK" (Talking Head, 20–30 s)
+
+**Koncept:**  
+Filip sedí na černém pozadí. Kolem něj se postupně zobrazují textové chybové hlášky (jako floating error logy). Filip je „swipuje" pryč a nahrazuje je zelenými OK hláškami s výsledky absolventů.
+
+**Vizuál:**  
+- Červené [ERR] hlášky vlétávají do záběru  
+- Filip je rukou „odhazuje"  
+- Nahrazují je zelené [OK] hlášky s reálnými výsledky  
+- Motion graphics + live action hybrid
+
+**Scénář:**  
+> „Manuální report — 4 hodiny. (swipe) Meeting o meetingu. (swipe) Copy-paste = strategie? (swipe) Tohle je tvůj error log. Ale tady je zajímavá věc — (zelené hlášky) Pavla ušetřila 660 tisíc. Kristina zkrátila 2 týdny na večer. A tebe to čeká taky."
+
+**Ad copy k videu:**
+> [ERR] Manuální procesy. Nula automatizace. Copy-paste „strategie."  
+> [OK] 660 000 Kč ušetřeno. 2 týdny → 1 večer. AI agenti v procesech.  
+>  
+> Filip Dřímalka ukazuje rozdíl mezi error logem a success logem.  
+>  
+> Future AI Leader 2026. 10 týdnů. Upgrade.  
+>  
+> 🎯 Zjisti víc →
+
+---
+
+#### Video C — „Your Monday" (POV Reel, 30–45 s)
+
+**Koncept:**  
+POV video — kamera = tvoje oči. Ráno, 47 notifikací na telefonu, chaotický den. Uprostřed videa „glitch" — restart — a stejné ráno, ale tentokrát s AI. Na konci se Filip ukáže a řekne punch line.
+
+**Vizuál:**  
+- První polovina: POV chaotického rána, zrychlený čas, stress  
+- Glitch efekt uprostřed (VHS / digital glitch)  
+- Druhá polovina: klidné ráno, 3 akce na screenu, AI agent pracuje  
+- Filip na konci jako „reveal"
+
+**Scénář (Filip na konci):**  
+> „Tohle není sci-fi. Tohle je pondělí absolventa Future AI Leader. Otázka je jenom jedna — chceš taky tenhle restart?"
+
+**Ad copy k videu:**
+> 47 mailů. 4 hodiny na reportu. Meeting o meetingu.  
+> 🔄 RESTART.  
+> 3 akce. Hotovo do 9:15. AI agent pracuje za tebe.  
+>  
+> Filip Dřímalka ti za 10 týdnů přeinstaluje celý pracovní systém.  
+>  
+> 👉 `$ fail --join` →
+
+---
+---
+
+### ✨ KAMPAŇ 3: BEFORE THEY DID — Video s Filipem
+
+#### Video A — „The Stories" (Testimonial Mashup, 45–60 s)
+
+**Koncept:**  
+Filip čte/sdílí reálné příběhy absolventů. Střídání: Filip mluví → text overlay s citátem → Filip komentuje. Styl: editorial, sebevědomý, klidný. Může být natočené v hezkém prostředí (knihovna, moderní office, studio).
+
+**Vizuál:**  
+- Warm tones, zlaté/krémové akcenty  
+- Serif font na citátech (Playfair Display — v souladu s kampaní)  
+- Jemný bokeh na pozadí  
+- Split: Filip 70 %, text overlay 30 %
+
+**Scénář:**  
+> „Pavla ušetřila firmě 660 tisíc korun. Přišla do programu bez jakýchkoli technických znalostí. (beat) Kristina zkrátila dvoutýdenní práci na jeden večer. (beat) Darja zvládla 80 slidů a 40 stran dokumentace za 3 hodiny. (beat) Oni to udělali dřív. A všechny spojuje jedno — Future AI Leader. (pause) Teď jsi na řadě ty."
+
+**CTA overlay (konec):**  
+`Future AI Leader 2026 · 250+ absolventů · aipredictions.cz/future-ai-leader`
+
+**Ad copy k videu:**
+> 660 000 Kč. 2 týdny → 1 večer. 80 slidů za 3 hodiny.  
+>  
+> Filip Dřímalka sdílí příběhy absolventů programu Future AI Leader. Žádné sliby — reálné výsledky.  
+>  
+> 250+ lídrů z T-Mobile, Volkswagen, Mondelēz. 95% doporučení.  
+>  
+> 🎯 Oni to udělali dřív. Kdy ty? →
+
+---
+
+#### Video B — „The Expert" (Authority Reel, 20–30 s)
+
+**Koncept:**  
+Rychlý, punchy reel. Filip mluví do kamery, na pozadí se střídají záběry z přednášek, workshopů, konferencí. Cíl: etablovat Filipa jako autoritu — a pak CTA.
+
+**Vizuál:**  
+- Dynamické střihy (1–2 s na záběr)  
+- B-roll: plný sál, networking, Filip na pódiu, lidi pracují na laptopech  
+- Text overlay: credentials (50 000+ knih, Osobnost AI 2025, 250+ absolventů)  
+- Konec: logo Future AI Leader + CTA
+
+**Scénář:**  
+> „50 tisíc prodaných knih. 250+ absolventů. Osobnost AI roku 2025. (beat) Ale tohle nejsou moje čísla. Tohle jsou čísla lidí, kterým jsem pomohl. A teď můžu pomoct tobě. Future AI Leader. 10 týdnů, které změní, jak pracuješ s AI."
+
+**Ad copy k videu:**
+> Autor bestselleru „Budoucnost nepráce". Osobnost AI 2025. 250+ vyškolených lídrů.  
+>  
+> Filip Dřímalka — průvodce programem Future AI Leader.  
+>  
+> 10 týdnů. AI mindset. Automatizace. AI agenti. Praxe. Komunita.  
+>  
+> 👉 Start: 13. března 2026 →
+
+---
+
+#### Video C — „Don't Wait" (Urgency Reel, 15–20 s)
+
+**Koncept:**  
+Krátké, naléhavé video. Filip mluví rychle, přímo, s energií. Na pozadí ticking clock / countdown vizuál. Styl: vertikální, nativní pro Reels/TikTok.
+
+**Vizuál:**  
+- Vertikální 9:16  
+- Countdown čísla v pozadí  
+- Červené urgency akcenty  
+- Rychlé řezy / jump cuts (TikTok styl)
+
+**Scénář:**  
+> „250+ lídrů to už udělalo. T-Mobile, Volkswagen, Mondelēz. (jump cut) Další ročník startuje 13. března. (jump cut) Místa se plní. Teď je na tobě — budeš mezi těmi, kdo to udělali dřív? Nebo budeš čekat?"
+
+**Ad copy k videu (varianta 1 — cold audience):**
+> ⏳ Další ročník Future AI Leader startuje 13. března 2026.  
+>  
+> Filip Dřímalka — Osobnost AI 2025 — tě provede 10týdenním programem.  
+> AI mindset · Automatizace · AI agenti · Komunita 250+ lídrů  
+>  
+> Nečekej, až ti to řekne konkurence.  
+>  
+> 👉 Rezervuj místo →
+
+**Ad copy k videu (varianta 2 — retargeting):**
+> Už to víš. Už jsi to viděl/a. Otázka je jednoduchá:  
+>  
+> Budeš mezi těmi, kdo to udělali dřív — nebo mezi těmi, kdo čekali?  
+>  
+> Filip Dřímalka. Future AI Leader. 13. března 2026.  
+>  
+> 👉 Neváhej →
+
+---
+---
+
+## 🎬 Shrnutí video konceptů
+
+| Kampaň | Video | Formát | Délka | Styl | Klíčový prvek |
+|---|---|---|---|---|---|
+| THE SPLIT | A — Two Screens | Reel/Story | 30–45 s | Split screen + talking head | BEZ AI vs. S AI vizuální kontrast |
+| THE SPLIT | B — The Question | Talking head | 15–20 s | Minimalistický, důvěrný | Přímá otázka do kamery |
+| THE SPLIT | C — Before & After | PiP + screen rec | 45–60 s | Screen recording + voiceover | Reálné workflow ukázky |
+| GLITCH | A — System Diagnostic | Reel/Story | 30–45 s | Terminal overlay + glitch | Diagnostika v reálném čase |
+| GLITCH | B — Error vs. OK | Talking head + MoGraph | 20–30 s | Motion graphics hybrid | Swipe error → success |
+| GLITCH | C — Your Monday | POV Reel | 30–45 s | POV + reveal | Restart pondělka |
+| BEFORE THEY DID | A — The Stories | Testimonial mashup | 45–60 s | Editorial, warm tones | Reálné příběhy absolventů |
+| BEFORE THEY DID | B — The Expert | Authority reel | 20–30 s | Dynamické střihy + B-roll | Filip jako autorita |
+| BEFORE THEY DID | C — Don't Wait | Urgency reel | 15–20 s | TikTok styl, jump cuts | Countdown + FOMO |
+
+### 📝 Produkční poznámky
+
+- **Filip by měl natáčet v několika prostředích:** tmavé studio (pro GLITCH), moderní office/knihovna (pro BEFORE THEY DID), neutrální pozadí (pro THE SPLIT)
+- **B-roll materiál:** záběry z minulých přednášek, workshopů, AI Predictions konference
+- **Formáty:** Primárně 9:16 (Reels, Stories, TikTok), sekundárně 1:1 (feed), volitelně 16:9 (YouTube pre-roll)
+- **Titulky:** Vždy zapečené (burned-in) — 85 % lidí sleduje bez zvuku
+- **Thumbnail:** U každého videa připravit statický cover s provokativním textem
+- **A/B testy:** Testovat verzi se subtitly vs. bez, verzi s hookem v prvních 3 s vs. s hookem v textu
+
+---
+---
+
 ## 📊 Shrnutí — přehled všech copy
 
 | Kampaň | Varianta | Hook formule | Headline (Meta) |
